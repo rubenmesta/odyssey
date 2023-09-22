@@ -31,12 +31,10 @@ const Navbar = _ref => {
     return /*#__PURE__*/_react.default.createElement(Item, null, item);
   })), withLogIn === true && !isLoggedIn ? /*#__PURE__*/_react.default.createElement(ButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: 'Log In',
-    variant: 'outlineWhite',
-    si: true
+    variant: 'outlineWhite'
   }), /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: 'Sign Up',
-    variant: 'outlineWhite',
-    si: true
+    variant: 'outlineWhite'
   })) : /*#__PURE__*/_react.default.createElement(_Avatar.default, {
     sx: {
       bgcolor: _colors.colors.orange[500]

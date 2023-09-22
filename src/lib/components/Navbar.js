@@ -26,8 +26,8 @@ const Navbar = ({
         </NavbarItems>
         {withLogIn === true && !isLoggedIn ? (
           <ButtonsContainer>
-            <Button label={'Log In'} variant={'outlineWhite'} si />
-            <Button label={'Sign Up'} variant={'outlineWhite'} si />
+            <Button label={'Log In'} variant={'outlineWhite'} />
+            <Button label={'Sign Up'} variant={'outlineWhite'} />
           </ButtonsContainer>
         ) : (
           <Avatar sx={{ bgcolor: colors.orange[500] }}>N</Avatar>

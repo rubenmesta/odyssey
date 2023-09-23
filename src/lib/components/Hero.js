@@ -6,7 +6,7 @@ import { Box, useTheme, Typography } from '@mui/material';
 import Button from './Button';
 import { MEDIA_QUERIES } from '../utils/media';
 import TextField from '@mui/material/TextField';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import SearchForm from './SeachForm';
 
 const Hero = ({
   image,
@@ -21,7 +21,7 @@ const Hero = ({
   variant = 'takeover' || 'standard' || 'slim',
   contentAlignment = 'center' || 'left',
   search = true,
-  searchButtonVariant,
+
   children,
 }) => {
   const imageHeight = (variant) => {
@@ -43,7 +43,7 @@ const Hero = ({
 
   const Description = styled(HeroDescription)({
     width: '400px',
-    color: theme.palette.common.white,
+    color: colors.white[500],
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.3rem',
     },
@@ -97,7 +97,7 @@ const Hero = ({
       margin: '0 auto',
       height: '100%',
       padding: '2rem 1rem',
-      color: theme.palette.common.white,
+      color: colors.white[500],
       gap: '2rem',
     },
     ({ contentAlignment }) => ({
@@ -108,13 +108,6 @@ const Hero = ({
       alignItems: contentAlignment === 'center' ? 'center' : 'flex-start',
       textAlign: contentAlignment === 'center' ? 'center' : 'left',
       justifyContent: 'center',
-      //   justifyContent:
-      //     (contentAlignment === 'center' || contentAlignment === 'left') &&
-      //     isMobile
-      //       ? 'space-between'
-      //       : (contentAlignment === 'center' || contentAlignment === 'left') &&
-      //         !isMobile &&
-      //         'center',
 
       [MEDIA_QUERIES.tablet]: {
         maxWidth: contentAlignment === 'center' ? '100%' : '1200px',
@@ -129,12 +122,12 @@ const Hero = ({
           <Box>
             {logo && <Logo src={logo} />}
             {title && (
-              <Title variant="h1" color={theme.palette.common.white}>
+              <Title variant="h1" color={colors.white[500]}>
                 {title}
               </Title>
             )}
             {subtitle && (
-              <Subtitle color={theme.palette.common.white}>{subtitle}</Subtitle>
+              <Subtitle color={colors.white[500]}>{subtitle}</Subtitle>
             )}
 
             {description && <Description>Description here</Description>}
@@ -149,48 +142,13 @@ const Hero = ({
           {children}
         </ContentWrapper>
       </Container>
-      {search && (
-        <Box
-          sx={{
-            color: 'black',
-            width: '100%',
-            background: colors.white[500],
-            height: '180px',
-            display: 'flex',
-
-            alignItems: 'center',
-          }}
-        >
-          <FormContainer>
-            <InputField
-              id="filled-search"
-              label="Destination"
-              type="search"
-              variant="outlined"
-              focusColor={colors.black[600]}
-              sx={{ flex: 3 }}
-            />
-            <DatePicker label="Start Date" sx={{ flex: 2 }} />
-            <DatePicker label="End Date" sx={{ flex: 2 }} />
-
-            <InputField
-              id="filled-search"
-              label="Travelers"
-              type="number"
-              variant="outlined"
-              focusColor={colors.black[600]}
-              sx={{ flex: 1 }}
-            />
-
-            <Button
-              label={'Search'}
-              variant={searchButtonVariant}
-              size={'large'}
-              style={{ flex: 1 }}
-            />
-          </FormContainer>
-        </Box>
-      )}
+      {/* {search && (
+        <SearchForm
+          backgroundColor={colors.purple[100]}
+          height={180}
+          buttonVariant={'black'}
+        />
+      )} */}
     </>
   );
 };
@@ -199,7 +157,7 @@ const Title = styled(Typography)({
   '&.MuiTypography-root': {
     color: '#fff',
     letterSpacing: '2px',
-    fontFamily: 'Prata',
+    fontFamily: 'Anton',
     fontSize: '5rem',
     lineHeight: 1,
     marginBottom: '1rem',
@@ -210,11 +168,11 @@ const Subtitle = styled(Typography)({
   '&.MuiTypography-root': {
     color: '#fff',
     letterSpacing: '2px',
-    fontSize: '3rem',
+    fontSize: '1.5rem',
     lineHeight: 1,
     fontWeight: 200,
     marginBottom: '1rem',
-    fontFamily: 'Montserrat',
+    fontFamily: 'Roboto',
   },
 });
 
@@ -252,38 +210,5 @@ const Logo = styled.img({
   padding: '1rem',
   width: '400px',
 });
-
-const FormContainer = styled(Box)({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  gap: '1rem',
-  maxWidth: '1200px',
-  width: '100%',
-  margin: '0 auto',
-});
-
-const InputField = styled(TextField, {
-  shouldForwardProp: (props) => props !== 'focusColor',
-})((p) => ({
-  // input label when focused
-  '& label.Mui-focused': {
-    color: p.focusColor,
-  },
-  // focused color for input with variant='standard'
-  '& .MuiInput-underline:after': {
-    borderBottomColor: p.focusColor,
-  },
-  // focused color for input with variant='filled'
-  '& .MuiFilledInput-underline:after': {
-    borderBottomColor: p.focusColor,
-  },
-  // focused color for input with variant='outlined'
-  '& .MuiOutlinedInput-root': {
-    '&.Mui-focused fieldset': {
-      borderColor: p.focusColor,
-    },
-  },
-}));
 
 export default Hero;

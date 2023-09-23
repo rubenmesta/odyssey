@@ -41,14 +41,14 @@ const Container = styled.div({
 });
 
 const Title = styled.h4({
-  fontFamily: 'Playfair Display',
+  fontFamily: 'Anton',
   fontSize: '1.5rem',
-  color: colors.secondary[500],
+  color: colors.black[800],
   margin: 0,
 });
 
 const Body = styled.p({
-  fontFamily: 'Montserrat',
+  fontFamily: 'Roboto',
   fontSize: '1rem',
   color: colors.black[800],
   lineHeight: 1.5,

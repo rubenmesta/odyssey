@@ -51,14 +51,14 @@ const StyledImage = styled.img({
 });
 
 const Title = styled.h2({
-  fontFamily: 'Prata',
+  fontFamily: 'Anton',
   color: colors.black.base,
   fontSize: '4rem',
   margin: 0,
 });
 
 const Body = styled.p({
-  fontFamily: 'Montserrat',
+  fontFamily: 'Roboto',
   fontSize: '1rem',
   color: colors.black.dark,
   lineHeight: 1.5,

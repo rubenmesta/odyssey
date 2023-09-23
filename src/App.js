@@ -10,7 +10,7 @@ import Card from './lib/components/Card';
 import Section from './lib/components/Section';
 import styled from '@emotion/styled';
 import Logo from './lib/components/Logo';
-import Button from './lib/components/Button';
+import { SearchForm } from './lib';
 
 function App() {
   const { navItems, col1, col2, col3, social } = data;
@@ -40,6 +40,12 @@ function App() {
           contentAlignment="left"
           search={true}
           searchButtonVariant={'secondary'}
+        />
+        <SearchForm
+          title="Seach your next adventure"
+          backgroundColor={colors.purple[100]}
+          height={180}
+          buttonVariant={'black'}
         />
 
         <Section

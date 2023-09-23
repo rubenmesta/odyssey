@@ -5,5 +5,6 @@ import Hero from './components/Hero';
 import Logo from './components/Logo';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
+import SearchForm from './components/SeachForm';
 
-export { Button, Footer, Navbar, Hero, Logo, Card, Section };
+export { Button, Footer, Navbar, Hero, Logo, Card, Section, SearchForm };

@@ -1,8 +1,8 @@
 import Button from './components/Button';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import Layout from './components/Layout';
 import Logo from './components/Logo';
 import Navbar from './components/Navbar';
+import colors from './utils/colors';
 
-export { Button, Footer, Navbar, Hero, Layout, Logo };
+export { Button, Footer, Navbar, Hero, Logo, colors };

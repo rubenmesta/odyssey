@@ -11,14 +11,15 @@ var _styled = _interopRequireDefault(require("@emotion/styled"));
 var _colors = require("../utils/colors");
 var _material = require("@mui/material");
 var _Button = _interopRequireDefault(require("./Button"));
-var _media = require("../utils/media");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const SearchForm = _ref => {
   let {
     title,
+    labelColor,
     backgroundColor,
     height,
-    buttonVariant
+    buttonVariant,
+    focusColor
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(_material.Box, {
     sx: {
@@ -39,29 +40,31 @@ const SearchForm = _ref => {
     label: "Destination",
     type: "search",
     variant: "outlined",
-    focusColor: _colors.colors.black[600],
+    focusColor: focusColor,
     sx: {
       background: 'white',
       flex: 3
     }
-  }), /*#__PURE__*/_react.default.createElement(_DatePicker.DatePicker, {
+  }), /*#__PURE__*/_react.default.createElement(Date, {
     label: "Start Date",
     sx: {
       background: 'white',
       flex: 2
-    }
-  }), /*#__PURE__*/_react.default.createElement(_DatePicker.DatePicker, {
+    },
+    focusColor: focusColor
+  }), /*#__PURE__*/_react.default.createElement(Date, {
     label: "End Date",
     sx: {
       background: 'white',
       flex: 2
-    }
+    },
+    focusColor: focusColor
   }), /*#__PURE__*/_react.default.createElement(InputField, {
     id: "filled-search",
     label: "Travelers",
     type: "number",
     variant: "outlined",
-    focusColor: _colors.colors.black[600],
+    focusColor: focusColor,
     sx: {
       background: 'white',
       flex: 1
@@ -85,30 +88,86 @@ const FormContainer = (0, _styled.default)(_material.Box)({
 const Title = _styled.default.h4({
   fontFamily: 'Roboto',
   fontSize: '1.3rem',
-  color: _colors.colors.black[800],
-  marginBottom: '0 0 .5rem 0'
+  margin: '0 0 .5rem 0'
+}, _ref2 => {
+  let {
+    color
+  } = _ref2;
+  return {
+    color: color
+  };
 });
-const InputField = (0, _styled.default)(_TextField.default, {
-  shouldForwardProp: props => props !== 'focusColor'
-})(p => ({
-  // input label when focused
-  '& label.Mui-focused': {
-    color: p.focusColor
-  },
-  // focused color for input with variant='standard'
-  '& .MuiInput-underline:after': {
-    borderBottomColor: p.focusColor
-  },
-  // focused color for input with variant='filled'
-  '& .MuiFilledInput-underline:after': {
-    borderBottomColor: p.focusColor
-  },
-  // focused color for input with variant='outlined'
-  '& .MuiOutlinedInput-root': {
-    '&.Mui-focused fieldset': {
-      borderColor: p.focusColor
+const InputField = (0, _styled.default)(_TextField.default)({}, _ref3 => {
+  let {
+    focusColor
+  } = _ref3;
+  return {
+    // input label when focused
+    '& label.Mui-focused': {
+      color: focusColor
+    },
+    // focused color for input with variant='standard'
+    '& .MuiInput-underline:after': {
+      borderBottomColor: focusColor
+    },
+    // focused color for input with variant='filled'
+    '& .MuiFilledInput-underline:after': {
+      borderBottomColor: focusColor
+    },
+    // focused color for input with variant='outlined'
+    '& .MuiOutlinedInput-root': {
+      '&.Mui-focused fieldset': {
+        borderColor: focusColor
+      }
     }
-  }
-}));
+  };
+});
+const Date = (0, _styled.default)(_DatePicker.DatePicker)({}, _ref4 => {
+  let {
+    focusColor
+  } = _ref4;
+  return {
+    // input label when focused
+    '& label.Mui-focused': {
+      color: focusColor
+    },
+    // focused color for input with variant='standard'
+    '& .MuiInput-underline:after': {
+      borderBottomColor: focusColor
+    },
+    // focused color for input with variant='filled'
+    '& .MuiFilledInput-underline:after': {
+      borderBottomColor: focusColor
+    },
+    // focused color for input with variant='outlined'
+    '& .MuiOutlinedInput-root': {
+      '&.Mui-focused fieldset': {
+        borderColor: focusColor
+      }
+    }
+  };
+});
+// const InputField = styled(TextField, {
+//   shouldForwardProp: (props) => props !== 'focusColor',
+// })((p) => ({
+//   // input label when focused
+//   '& label.Mui-focused': {
+//     color: p.focusColor,
+//   },
+//   // focused color for input with variant='standard'
+//   '& .MuiInput-underline:after': {
+//     borderBottomColor: p.focusColor,
+//   },
+//   // focused color for input with variant='filled'
+//   '& .MuiFilledInput-underline:after': {
+//     borderBottomColor: p.focusColor,
+//   },
+//   // focused color for input with variant='outlined'
+//   '& .MuiOutlinedInput-root': {
+//     '&.Mui-focused fieldset': {
+//       borderColor: p.focusColor,
+//     },
+//   },
+// }));
 var _default = SearchForm;
 exports.default = _default;

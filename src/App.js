@@ -44,9 +44,11 @@ function App() {
         />
         <SearchForm
           title="Seach your next adventure"
-          backgroundColor={colors.purple[100]}
+          backgroundColor={colors.secondary[100]}
           height={180}
           buttonVariant={'black'}
+          focusColor={colors.black[800]}
+          labelColor={colors.white[500]}
         />
 
         <Section
@@ -54,6 +56,7 @@ function App() {
           title={'Mondays'}
           body="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
           buttonText="Learn More"
+          variant={'purple'}
         />
         <CardsContainer>
           {cards.map((card) => {

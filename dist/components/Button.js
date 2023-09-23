@@ -66,13 +66,13 @@ const variantStyles = {
       border: "1px solid ".concat(_colors.colors.grey[800])
     }
   },
-  light: {
-    backgroundColor: _colors.colors.orange[500],
-    color: _colors.colors.black[500],
-    border: "1px solid ".concat(_colors.colors.orange[500]),
+  purple: {
+    backgroundColor: _colors.colors.purple[800],
+    color: _colors.colors.white[500],
+    border: "1px solid ".concat(_colors.colors.purple[800]),
     '&:hover': {
-      backgroundColor: _colors.colors.orange[400],
-      border: "1px solid ".concat(_colors.colors.orange[400])
+      backgroundColor: _colors.colors.purple[700],
+      border: "1px solid ".concat(_colors.colors.purple[700])
     }
   },
   outlinePrimary: {

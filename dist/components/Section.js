@@ -14,6 +14,7 @@ const Section = _ref => {
     image,
     title,
     body,
+    variant,
     buttonText,
     flip = false
   } = _ref;
@@ -23,7 +24,7 @@ const Section = _ref => {
     src: image
   })), /*#__PURE__*/_react.default.createElement(ContentSection, null, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: buttonText,
-    variant: 'primary'
+    variant: variant
   })));
 };
 const Container = (0, _styled.default)('div', {

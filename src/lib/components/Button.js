@@ -60,14 +60,14 @@ const variantStyles = {
       border: `1px solid ${colors.grey[800]}`,
     },
   },
-  light: {
-    backgroundColor: colors.orange[500],
-    color: colors.black[500],
-    border: `1px solid ${colors.orange[500]}`,
+  purple: {
+    backgroundColor: colors.purple[800],
+    color: colors.white[500],
+    border: `1px solid ${colors.purple[800]}`,
 
     '&:hover': {
-      backgroundColor: colors.orange[400],
-      border: `1px solid ${colors.orange[400]}`,
+      backgroundColor: colors.purple[700],
+      border: `1px solid ${colors.purple[700]}`,
     },
   },
   outlinePrimary: {

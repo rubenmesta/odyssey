@@ -5,9 +5,15 @@ import styled from '@emotion/styled';
 import { colors } from '../utils/colors';
 import { Box } from '@mui/material';
 import Button from './Button';
-import { MEDIA_QUERIES } from '../utils/media';
 
-const SearchForm = ({ title, backgroundColor, height, buttonVariant }) => {
+const SearchForm = ({
+  title,
+  labelColor,
+  backgroundColor,
+  height,
+  buttonVariant,
+  focusColor,
+}) => {
   return (
     <Box
       sx={{
@@ -33,21 +39,26 @@ const SearchForm = ({ title, backgroundColor, height, buttonVariant }) => {
             label="Destination"
             type="search"
             variant="outlined"
-            focusColor={colors.black[600]}
+            focusColor={focusColor}
             sx={{ background: 'white', flex: 3 }}
           />
-          <DatePicker
+          <Date
             label="Start Date"
             sx={{ background: 'white', flex: 2 }}
+            focusColor={focusColor}
           />
-          <DatePicker label="End Date" sx={{ background: 'white', flex: 2 }} />
+          <Date
+            label="End Date"
+            sx={{ background: 'white', flex: 2 }}
+            focusColor={focusColor}
+          />
 
           <InputField
             id="filled-search"
             label="Travelers"
             type="number"
             variant="outlined"
-            focusColor={colors.black[600]}
+            focusColor={focusColor}
             sx={{ background: 'white', flex: 1 }}
           />
 
@@ -70,34 +81,80 @@ const FormContainer = styled(Box)({
   gap: '1rem',
   width: '100%',
 });
-const Title = styled.h4({
-  fontFamily: 'Roboto',
-  fontSize: '1.3rem',
-  color: colors.black[800],
-  marginBottom: '0 0 .5rem 0',
-});
 
-const InputField = styled(TextField, {
-  shouldForwardProp: (props) => props !== 'focusColor',
-})((p) => ({
+const Title = styled.h4(
+  {
+    fontFamily: 'Roboto',
+    fontSize: '1.3rem',
+    margin: '0 0 .5rem 0',
+  },
+  ({ color }) => ({
+    color: color,
+  })
+);
+
+const InputField = styled(TextField)({}, ({ focusColor }) => ({
   // input label when focused
   '& label.Mui-focused': {
-    color: p.focusColor,
+    color: focusColor,
   },
   // focused color for input with variant='standard'
   '& .MuiInput-underline:after': {
-    borderBottomColor: p.focusColor,
+    borderBottomColor: focusColor,
   },
   // focused color for input with variant='filled'
   '& .MuiFilledInput-underline:after': {
-    borderBottomColor: p.focusColor,
+    borderBottomColor: focusColor,
   },
   // focused color for input with variant='outlined'
   '& .MuiOutlinedInput-root': {
     '&.Mui-focused fieldset': {
-      borderColor: p.focusColor,
+      borderColor: focusColor,
     },
   },
 }));
+
+const Date = styled(DatePicker)({}, ({ focusColor }) => ({
+  // input label when focused
+  '& label.Mui-focused': {
+    color: focusColor,
+  },
+  // focused color for input with variant='standard'
+  '& .MuiInput-underline:after': {
+    borderBottomColor: focusColor,
+  },
+  // focused color for input with variant='filled'
+  '& .MuiFilledInput-underline:after': {
+    borderBottomColor: focusColor,
+  },
+  // focused color for input with variant='outlined'
+  '& .MuiOutlinedInput-root': {
+    '&.Mui-focused fieldset': {
+      borderColor: focusColor,
+    },
+  },
+}));
+// const InputField = styled(TextField, {
+//   shouldForwardProp: (props) => props !== 'focusColor',
+// })((p) => ({
+//   // input label when focused
+//   '& label.Mui-focused': {
+//     color: p.focusColor,
+//   },
+//   // focused color for input with variant='standard'
+//   '& .MuiInput-underline:after': {
+//     borderBottomColor: p.focusColor,
+//   },
+//   // focused color for input with variant='filled'
+//   '& .MuiFilledInput-underline:after': {
+//     borderBottomColor: p.focusColor,
+//   },
+//   // focused color for input with variant='outlined'
+//   '& .MuiOutlinedInput-root': {
+//     '&.Mui-focused fieldset': {
+//       borderColor: p.focusColor,
+//     },
+//   },
+// }));
 
 export default SearchForm;

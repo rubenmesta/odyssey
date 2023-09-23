@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { colors } from '../utils/colors';
 import Button from './Button';
 
-const Section = ({ image, title, body, buttonText, flip = false }) => {
+const Section = ({ image, title, body, variant, buttonText, flip = false }) => {
   return (
     <Container flip={flip}>
       <ImageSection>
@@ -13,7 +13,7 @@ const Section = ({ image, title, body, buttonText, flip = false }) => {
       <ContentSection>
         <Title>{title}</Title>
         <Body>{body} </Body>
-        <Button label={buttonText} variant={'primary'} />
+        <Button label={buttonText} variant={variant} />
       </ContentSection>
     </Container>
   );

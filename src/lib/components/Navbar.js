@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 import { colors } from '../utils/colors';
 import Button from './Button';
-import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import Divider from '@mui/material/Divider';
@@ -16,7 +15,6 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import Typography from '@mui/material/Typography';
-import Logo from './Logo';
 import { MEDIA_QUERIES } from '../utils/media';
 
 const Navbar = ({
@@ -24,18 +22,8 @@ const Navbar = ({
   items,
   background,
   itemsColor,
-  logInButton = 'primary' ||
-    'secondary' ||
-    'black' ||
-    'light' ||
-    'utlinePrimary' ||
-    'utlineWhite',
-  signUpButton = 'primary' ||
-    'secondary' ||
-    'black' ||
-    'light' ||
-    'utlinePrimary' ||
-    'utlineWhite',
+  variant,
+  buttonLabel,
   withLogIn = false,
   mobileMenuColor,
 }) => {
@@ -84,13 +72,8 @@ const Navbar = ({
           {withLogIn === true && (
             <ButtonsContainer>
               <Button
-                label={'Log In'}
-                variant={logInButton || 'primary'}
-                size={'medium'}
-              />
-              <Button
-                label={'Sign Up'}
-                variant={signUpButton || 'outlinePrimary'}
+                label={buttonLabel}
+                variant={variant || 'primary'}
                 size={'medium'}
               />
             </ButtonsContainer>

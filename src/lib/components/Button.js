@@ -106,8 +106,8 @@ const sizeStyles = {
     fontSize: '1rem',
   },
   large: {
-    height: '50px',
-    lineHeight: '50px',
+    height: '56px',
+    lineHeight: '56px',
     padding: '1rem',
     fontSize: '1.2rem',
   },

@@ -10,7 +10,6 @@ var _styled = _interopRequireDefault(require("@emotion/styled"));
 var _material = require("@mui/material");
 var _colors = require("../utils/colors");
 var _Button = _interopRequireDefault(require("./Button"));
-var _Avatar = _interopRequireDefault(require("@mui/material/Avatar"));
 var _CssBaseline = _interopRequireDefault(require("@mui/material/CssBaseline"));
 var _Divider = _interopRequireDefault(require("@mui/material/Divider"));
 var _Drawer = _interopRequireDefault(require("@mui/material/Drawer"));
@@ -21,7 +20,6 @@ var _ListItemText = _interopRequireDefault(require("@mui/material/ListItemText")
 var _IconButton = _interopRequireDefault(require("@mui/material/IconButton"));
 var _Menu = _interopRequireDefault(require("@mui/icons-material/Menu"));
 var _Typography = _interopRequireDefault(require("@mui/material/Typography"));
-var _Logo = _interopRequireDefault(require("./Logo"));
 var _media = require("../utils/media");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const Navbar = _ref => {
@@ -30,8 +28,8 @@ const Navbar = _ref => {
     items,
     background,
     itemsColor,
-    logInButton = 'primary' || 'secondary' || 'black' || 'light' || 'utlinePrimary' || 'utlineWhite',
-    signUpButton = 'primary' || 'secondary' || 'black' || 'light' || 'utlinePrimary' || 'utlineWhite',
+    variant,
+    buttonLabel,
     withLogIn = false,
     mobileMenuColor
   } = _ref;
@@ -75,12 +73,8 @@ const Navbar = _ref => {
   }, items.map(item => {
     return /*#__PURE__*/_react.default.createElement(Item, null, item);
   })), withLogIn === true && /*#__PURE__*/_react.default.createElement(ButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
-    label: 'Log In',
-    variant: logInButton || 'primary',
-    size: 'medium'
-  }), /*#__PURE__*/_react.default.createElement(_Button.default, {
-    label: 'Sign Up',
-    variant: signUpButton || 'outlinePrimary',
+    label: buttonLabel,
+    variant: variant || 'primary',
     size: 'medium'
   }))), /*#__PURE__*/_react.default.createElement(_IconButton.default, {
     color: "inherit",

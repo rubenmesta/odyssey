@@ -10,6 +10,7 @@ import Card from './lib/components/Card';
 import Section from './lib/components/Section';
 import styled from '@emotion/styled';
 import Logo from './lib/components/Logo';
+import Button from './lib/components/Button';
 
 function App() {
   const { navItems, col1, col2, col3, social } = data;
@@ -26,8 +27,8 @@ function App() {
           })}
           mobileMenuColor={colors.white[500]}
           withLogIn
-          logInButton="primary"
-          signUpButton="outlinePrimary"
+          variant={'primary'}
+          buttonLabel={'Log In'}
         />
         <Hero
           variant="slim"
@@ -38,6 +39,7 @@ function App() {
           secondaryCta={'Explore'}
           contentAlignment="left"
           search={true}
+          searchButtonVariant={'secondary'}
         />
 
         <Section

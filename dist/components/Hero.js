@@ -30,6 +30,7 @@ const Hero = _ref => {
     variant = 'takeover' || 'standard' || 'slim',
     contentAlignment = 'center' || 'left',
     search = true,
+    searchButtonVariant,
     children
   } = _ref;
   const imageHeight = variant => {
@@ -177,6 +178,8 @@ const Hero = _ref => {
     }
   }), /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: 'Search',
+    variant: searchButtonVariant,
+    size: 'large',
     style: {
       flex: 1
     }

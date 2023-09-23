@@ -21,6 +21,7 @@ const Hero = ({
   variant = 'takeover' || 'standard' || 'slim',
   contentAlignment = 'center' || 'left',
   search = true,
+  searchButtonVariant,
   children,
 }) => {
   const imageHeight = (variant) => {
@@ -181,7 +182,12 @@ const Hero = ({
               sx={{ flex: 1 }}
             />
 
-            <Button label={'Search'} style={{ flex: 1 }} />
+            <Button
+              label={'Search'}
+              variant={searchButtonVariant}
+              size={'large'}
+              style={{ flex: 1 }}
+            />
           </FormContainer>
         </Box>
       )}

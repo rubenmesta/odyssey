@@ -4,21 +4,31 @@ import { colors } from '../utils/colors';
 import Button from './Button';
 import { Box } from '@mui/material';
 
-const Footer = ({ title, col1, col2, col3, social, avatar }) => {
-  const arrayChunk = (arr, n) => {
-    const array = arr.slice();
-    const chunks = [];
-    while (array.length) chunks.push(array.splice(0, n));
-    return chunks;
-  };
+const Footer = ({
+  title,
+  col1,
+  col2,
+  col3,
+  social,
+  avatar,
+  background,
+  backgroundImage,
+  buttonVariant,
+}) => {
   return (
-    <StyledFooter>
+    <StyledFooter
+      background={background || colors.black[800]}
+      backgroundImage={backgroundImage}
+    >
       <FooterContainer>
         <FooterHero>
           <FooterContact>
             <FooterContactTitle>{title}</FooterContactTitle>
             <ButtonsContainer>
-              <Button label={'Sign Up for Free'} variant={'outlinePrimary'} />
+              <Button
+                label={'Sign Up for Free'}
+                variant={buttonVariant || 'outlinePrimary'}
+              />
             </ButtonsContainer>
           </FooterContact>
           <FooterAvatar>
@@ -60,13 +70,18 @@ const Footer = ({ title, col1, col2, col3, social, avatar }) => {
   );
 };
 
-const StyledFooter = styled.footer({
-  background: colors.black[800],
-  color: colors.white.base,
-  width: '100%',
-
-  padding: '65px 0',
-});
+const StyledFooter = styled.footer(
+  {
+    color: colors.white.base,
+    width: '100%',
+    padding: '65px 0',
+  },
+  ({ background, backgroundImage }) => ({
+    background: background,
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+  })
+);
 
 const FooterContainer = styled.div({
   width: '100%',
@@ -101,6 +116,7 @@ const ButtonsContainer = styled.div({
 
 const FooterContactTitle = styled.h3({
   fontSize: '36px',
+  textAlign: 'left',
 });
 
 const FooterAvatar = styled.div({

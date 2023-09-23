@@ -17,17 +17,17 @@ const Footer = _ref => {
     col2,
     col3,
     social,
-    avatar
+    avatar,
+    background,
+    backgroundImage,
+    buttonVariant
   } = _ref;
-  const arrayChunk = (arr, n) => {
-    const array = arr.slice();
-    const chunks = [];
-    while (array.length) chunks.push(array.splice(0, n));
-    return chunks;
-  };
-  return /*#__PURE__*/_react.default.createElement(StyledFooter, null, /*#__PURE__*/_react.default.createElement(FooterContainer, null, /*#__PURE__*/_react.default.createElement(FooterHero, null, /*#__PURE__*/_react.default.createElement(FooterContact, null, /*#__PURE__*/_react.default.createElement(FooterContactTitle, null, title), /*#__PURE__*/_react.default.createElement(ButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
+  return /*#__PURE__*/_react.default.createElement(StyledFooter, {
+    background: background || _colors.colors.black[800],
+    backgroundImage: backgroundImage
+  }, /*#__PURE__*/_react.default.createElement(FooterContainer, null, /*#__PURE__*/_react.default.createElement(FooterHero, null, /*#__PURE__*/_react.default.createElement(FooterContact, null, /*#__PURE__*/_react.default.createElement(FooterContactTitle, null, title), /*#__PURE__*/_react.default.createElement(ButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: 'Sign Up for Free',
-    variant: 'outlinePrimary'
+    variant: buttonVariant || 'outlinePrimary'
   }))), /*#__PURE__*/_react.default.createElement(FooterAvatar, null, /*#__PURE__*/_react.default.createElement("img", {
     src: avatar
   }))), /*#__PURE__*/_react.default.createElement(FooterContent, null, /*#__PURE__*/_react.default.createElement(FooterLogo, null, /*#__PURE__*/_react.default.createElement("img", {
@@ -45,10 +45,19 @@ const Footer = _ref => {
   })))))));
 };
 const StyledFooter = _styled.default.footer({
-  background: _colors.colors.black[800],
   color: _colors.colors.white.base,
   width: '100%',
   padding: '65px 0'
+}, _ref2 => {
+  let {
+    background,
+    backgroundImage
+  } = _ref2;
+  return {
+    background: background,
+    backgroundImage: "url(".concat(backgroundImage, ")"),
+    backgroundSize: 'cover'
+  };
 });
 const FooterContainer = _styled.default.div({
   width: '100%',
@@ -78,7 +87,8 @@ const ButtonsContainer = _styled.default.div({
   gap: '2rem'
 });
 const FooterContactTitle = _styled.default.h3({
-  fontSize: '36px'
+  fontSize: '36px',
+  textAlign: 'left'
 });
 const FooterAvatar = _styled.default.div({
   marginBottom: '25px',

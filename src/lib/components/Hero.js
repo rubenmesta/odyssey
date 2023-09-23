@@ -142,13 +142,13 @@ const Hero = ({
           {children}
         </ContentWrapper>
       </Container>
-      {/* {search && (
+      {search && (
         <SearchForm
           backgroundColor={colors.purple[100]}
           height={180}
           buttonVariant={'black'}
         />
-      )} */}
+      )}
     </>
   );
 };

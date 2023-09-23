@@ -130,7 +130,11 @@ const Hero = _ref => {
     display: "flex",
     flexDirection: "column",
     gap: "10px"
-  }, (primaryCta || secondaryCta) && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_material.Box, null, renderCTAs(primaryCta, secondaryCta)))), children)));
+  }, (primaryCta || secondaryCta) && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_material.Box, null, renderCTAs(primaryCta, secondaryCta)))), children)), search && /*#__PURE__*/_react.default.createElement(_SeachForm.default, {
+    backgroundColor: _colors.colors.purple[100],
+    height: 180,
+    buttonVariant: 'black'
+  }));
 };
 const Title = (0, _styled.default)(_material.Typography)({
   '&.MuiTypography-root': {

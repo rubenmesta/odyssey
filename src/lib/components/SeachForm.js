@@ -74,7 +74,7 @@ const Title = styled.h4({
   fontFamily: 'Roboto',
   fontSize: '1.3rem',
   color: colors.black[800],
-  marginBottom: '.5rem',
+  marginBottom: '0 0 .5rem 0',
 });
 
 const InputField = styled(TextField, {

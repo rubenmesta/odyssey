@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { colors } from '../utils/colors';
 import Button from './Button';
+import { Box } from '@mui/material';
 
 const Card = ({ image, title, body, variant, buttonText }) => {
   return (
@@ -11,15 +12,24 @@ const Card = ({ image, title, body, variant, buttonText }) => {
         <StyledImage src={image} />
       </div>
       <Container>
-        <Title>{title}</Title>
-        <Body>{body} </Body>
-        {variant && <Button label={buttonText} variant={variant} />}
+        <Box
+          sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
+          id="card-content"
+        >
+          <Title>{title}</Title>
+          <Body>{body} </Body>
+        </Box>
+        <Box>
+          {variant && <Button label={buttonText} variant={variant} fullwidth />}
+        </Box>
       </Container>
     </StyledCard>
   );
 };
 
 const StyledCard = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
   border: `1px solid ${colors.grey[300]}`,
   borderRadius: '8px',
   color: colors.black[800],
@@ -29,7 +39,7 @@ const StyledCard = styled.div({
 
 const StyledImage = styled.img({
   width: '100%',
-  height: 'auto',
+  height: '200px',
   borderRadius: '8px 8px 0 0',
 });
 
@@ -38,6 +48,7 @@ const Container = styled.div({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
+  flexGrow: 1,
 });
 
 const Title = styled.h4({

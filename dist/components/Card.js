@@ -8,6 +8,7 @@ var _react = _interopRequireDefault(require("react"));
 var _styled = _interopRequireDefault(require("@emotion/styled"));
 var _colors = require("../utils/colors");
 var _Button = _interopRequireDefault(require("./Button"));
+var _material = require("@mui/material");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const Card = _ref => {
   let {
@@ -19,12 +20,22 @@ const Card = _ref => {
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledCard, null, /*#__PURE__*/_react.default.createElement("div", null, ' ', /*#__PURE__*/_react.default.createElement(StyledImage, {
     src: image
-  })), /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), variant && /*#__PURE__*/_react.default.createElement(_Button.default, {
+  })), /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(_material.Box, {
+    sx: {
+      display: 'flex',
+      flexDirection: 'column',
+      flexGrow: 1
+    },
+    id: "card-content"
+  }, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " ")), /*#__PURE__*/_react.default.createElement(_material.Box, null, variant && /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: buttonText,
-    variant: variant
-  })));
+    variant: variant,
+    fullwidth: true
+  }))));
 };
 const StyledCard = _styled.default.div({
+  display: 'flex',
+  flexDirection: 'column',
   border: "1px solid ".concat(_colors.colors.grey[300]),
   borderRadius: '8px',
   color: _colors.colors.black[800],
@@ -33,14 +44,15 @@ const StyledCard = _styled.default.div({
 });
 const StyledImage = _styled.default.img({
   width: '100%',
-  height: 'auto',
+  height: '200px',
   borderRadius: '8px 8px 0 0'
 });
 const Container = _styled.default.div({
   padding: '1rem 1rem 2rem',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  flexGrow: 1
 });
 const Title = _styled.default.h4({
   fontFamily: 'Anton',

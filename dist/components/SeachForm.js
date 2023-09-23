@@ -86,7 +86,7 @@ const Title = _styled.default.h4({
   fontFamily: 'Roboto',
   fontSize: '1.3rem',
   color: _colors.colors.black[800],
-  marginBottom: '.5rem'
+  marginBottom: '0 0 .5rem 0'
 });
 const InputField = (0, _styled.default)(_TextField.default, {
   shouldForwardProp: props => props !== 'focusColor'

@@ -11,6 +11,7 @@ import Section from './lib/components/Section';
 import styled from '@emotion/styled';
 import Logo from './lib/components/Logo';
 import { SearchForm } from './lib';
+import { cards } from './data';
 
 function App() {
   const { navItems, col1, col2, col3, social } = data;
@@ -38,7 +39,7 @@ function App() {
           primaryCta={'Book Your Adventure'}
           secondaryCta={'Explore'}
           contentAlignment="left"
-          search={true}
+          search={false}
           searchButtonVariant={'secondary'}
         />
         <SearchForm
@@ -55,27 +56,17 @@ function App() {
           buttonText="Learn More"
         />
         <CardsContainer>
-          <Card
-            image="/img/footer-bg.png"
-            title="Mondays"
-            body="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            buttonText="Learn More"
-            variant="primary"
-          />
-          <Card
-            image="/img/food6.jpg"
-            title={'Wednesday'}
-            body="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            buttonText="Learn More"
-            variant={'secondary'}
-          />
-          <Card
-            image="/img/food7.jpg"
-            title={'Thursday'}
-            body="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            buttonText="Learn More"
-            variant={'black'}
-          />
+          {cards.map((card) => {
+            return (
+              <Card
+                image={card.image}
+                title={card.title}
+                body={card.body}
+                buttonText={card.buttonText}
+                variant={card.variant}
+              />
+            );
+          })}
         </CardsContainer>
         <Footer
           title={'Explore the Cosmos'}

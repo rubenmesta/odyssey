@@ -43,13 +43,13 @@ const Container = _styled.default.div({
   justifyContent: 'center'
 });
 const Title = _styled.default.h4({
-  fontFamily: 'Playfair Display',
+  fontFamily: 'Anton',
   fontSize: '1.5rem',
-  color: _colors.colors.secondary[500],
+  color: _colors.colors.black[800],
   margin: 0
 });
 const Body = _styled.default.p({
-  fontFamily: 'Montserrat',
+  fontFamily: 'Roboto',
   fontSize: '1rem',
   color: _colors.colors.black[800],
   lineHeight: 1.5

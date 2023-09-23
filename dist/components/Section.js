@@ -59,13 +59,13 @@ const StyledImage = _styled.default.img({
   height: 'auto'
 });
 const Title = _styled.default.h2({
-  fontFamily: 'Prata',
+  fontFamily: 'Anton',
   color: _colors.colors.black.base,
   fontSize: '4rem',
   margin: 0
 });
 const Body = _styled.default.p({
-  fontFamily: 'Montserrat',
+  fontFamily: 'Roboto',
   fontSize: '1rem',
   color: _colors.colors.black.dark,
   lineHeight: 1.5,

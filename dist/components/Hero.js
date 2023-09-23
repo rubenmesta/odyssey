@@ -14,7 +14,7 @@ var _material = require("@mui/material");
 var _Button = _interopRequireDefault(require("./Button"));
 var _media = require("../utils/media");
 var _TextField = _interopRequireDefault(require("@mui/material/TextField"));
-var _DatePicker = require("@mui/x-date-pickers/DatePicker");
+var _SeachForm = _interopRequireDefault(require("./SeachForm"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const Hero = _ref => {
   let {
@@ -30,7 +30,6 @@ const Hero = _ref => {
     variant = 'takeover' || 'standard' || 'slim',
     contentAlignment = 'center' || 'left',
     search = true,
-    searchButtonVariant,
     children
   } = _ref;
   const imageHeight = variant => {
@@ -50,7 +49,7 @@ const Hero = _ref => {
   const theme = (0, _material.useTheme)();
   const Description = (0, _styled.default)(HeroDescription)({
     width: '400px',
-    color: theme.palette.common.white,
+    color: _colors.colors.white[500],
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.3rem'
     }
@@ -97,7 +96,7 @@ const Hero = _ref => {
     margin: '0 auto',
     height: '100%',
     padding: '2rem 1rem',
-    color: theme.palette.common.white,
+    color: _colors.colors.white[500],
     gap: '2rem'
   }, _ref3 => {
     let {
@@ -110,14 +109,6 @@ const Hero = _ref => {
       alignItems: contentAlignment === 'center' ? 'center' : 'flex-start',
       textAlign: contentAlignment === 'center' ? 'center' : 'left',
       justifyContent: 'center',
-      //   justifyContent:
-      //     (contentAlignment === 'center' || contentAlignment === 'left') &&
-      //     isMobile
-      //       ? 'space-between'
-      //       : (contentAlignment === 'center' || contentAlignment === 'left') &&
-      //         !isMobile &&
-      //         'center',
-
       [_media.MEDIA_QUERIES.tablet]: {
         maxWidth: contentAlignment === 'center' ? '100%' : '1200px'
       }
@@ -132,64 +123,20 @@ const Hero = _ref => {
     src: logo
   }), title && /*#__PURE__*/_react.default.createElement(Title, {
     variant: "h1",
-    color: theme.palette.common.white
+    color: _colors.colors.white[500]
   }, title), subtitle && /*#__PURE__*/_react.default.createElement(Subtitle, {
-    color: theme.palette.common.white
+    color: _colors.colors.white[500]
   }, subtitle), description && /*#__PURE__*/_react.default.createElement(Description, null, "Description here")), /*#__PURE__*/_react.default.createElement(ButtonsContainer, {
     display: "flex",
     flexDirection: "column",
     gap: "10px"
-  }, (primaryCta || secondaryCta) && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_material.Box, null, renderCTAs(primaryCta, secondaryCta)))), children)), search && /*#__PURE__*/_react.default.createElement(_material.Box, {
-    sx: {
-      color: 'black',
-      width: '100%',
-      background: _colors.colors.white[500],
-      height: '180px',
-      display: 'flex',
-      alignItems: 'center'
-    }
-  }, /*#__PURE__*/_react.default.createElement(FormContainer, null, /*#__PURE__*/_react.default.createElement(InputField, {
-    id: "filled-search",
-    label: "Destination",
-    type: "search",
-    variant: "outlined",
-    focusColor: _colors.colors.black[600],
-    sx: {
-      flex: 3
-    }
-  }), /*#__PURE__*/_react.default.createElement(_DatePicker.DatePicker, {
-    label: "Start Date",
-    sx: {
-      flex: 2
-    }
-  }), /*#__PURE__*/_react.default.createElement(_DatePicker.DatePicker, {
-    label: "End Date",
-    sx: {
-      flex: 2
-    }
-  }), /*#__PURE__*/_react.default.createElement(InputField, {
-    id: "filled-search",
-    label: "Travelers",
-    type: "number",
-    variant: "outlined",
-    focusColor: _colors.colors.black[600],
-    sx: {
-      flex: 1
-    }
-  }), /*#__PURE__*/_react.default.createElement(_Button.default, {
-    label: 'Search',
-    variant: searchButtonVariant,
-    size: 'large',
-    style: {
-      flex: 1
-    }
-  }))));
+  }, (primaryCta || secondaryCta) && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_material.Box, null, renderCTAs(primaryCta, secondaryCta)))), children)));
 };
 const Title = (0, _styled.default)(_material.Typography)({
   '&.MuiTypography-root': {
     color: '#fff',
     letterSpacing: '2px',
-    fontFamily: 'Prata',
+    fontFamily: 'Anton',
     fontSize: '5rem',
     lineHeight: 1,
     marginBottom: '1rem'
@@ -199,11 +146,11 @@ const Subtitle = (0, _styled.default)(_material.Typography)({
   '&.MuiTypography-root': {
     color: '#fff',
     letterSpacing: '2px',
-    fontSize: '3rem',
+    fontSize: '1.5rem',
     lineHeight: 1,
     fontWeight: 200,
     marginBottom: '1rem',
-    fontFamily: 'Montserrat'
+    fontFamily: 'Roboto'
   }
 });
 const InnerContainer = (0, _styled.default)(_material.Box)({
@@ -236,36 +183,5 @@ const Logo = _styled.default.img({
   padding: '1rem',
   width: '400px'
 });
-const FormContainer = (0, _styled.default)(_material.Box)({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  gap: '1rem',
-  maxWidth: '1200px',
-  width: '100%',
-  margin: '0 auto'
-});
-const InputField = (0, _styled.default)(_TextField.default, {
-  shouldForwardProp: props => props !== 'focusColor'
-})(p => ({
-  // input label when focused
-  '& label.Mui-focused': {
-    color: p.focusColor
-  },
-  // focused color for input with variant='standard'
-  '& .MuiInput-underline:after': {
-    borderBottomColor: p.focusColor
-  },
-  // focused color for input with variant='filled'
-  '& .MuiFilledInput-underline:after': {
-    borderBottomColor: p.focusColor
-  },
-  // focused color for input with variant='outlined'
-  '& .MuiOutlinedInput-root': {
-    '&.Mui-focused fieldset': {
-      borderColor: p.focusColor
-    }
-  }
-}));
 var _default = Hero;
 exports.default = _default;

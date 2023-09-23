@@ -39,6 +39,12 @@ Object.defineProperty(exports, "Navbar", {
     return _Navbar.default;
   }
 });
+Object.defineProperty(exports, "SearchForm", {
+  enumerable: true,
+  get: function get() {
+    return _SeachForm.default;
+  }
+});
 Object.defineProperty(exports, "Section", {
   enumerable: true,
   get: function get() {
@@ -52,4 +58,5 @@ var _Hero = _interopRequireDefault(require("./components/Hero"));
 var _Logo = _interopRequireDefault(require("./components/Logo"));
 var _Navbar = _interopRequireDefault(require("./components/Navbar"));
 var _Section = _interopRequireDefault(require("./components/Section"));
+var _SeachForm = _interopRequireDefault(require("./components/SeachForm"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

@@ -24,10 +24,19 @@ const Navbar = ({
   items,
   background,
   itemsColor,
-  logInButton,
-  signUpButton,
+  logInButton = 'primary' ||
+    'secondary' ||
+    'black' ||
+    'light' ||
+    'utlinePrimary' ||
+    'utlineWhite',
+  signUpButton = 'primary' ||
+    'secondary' ||
+    'black' ||
+    'light' ||
+    'utlinePrimary' ||
+    'utlineWhite',
   withLogIn = false,
-  isLoggedIn = false,
   mobileMenuColor,
 }) => {
   const drawerWidth = 340;
@@ -64,27 +73,27 @@ const Navbar = ({
       <CssBaseline />
 
       <NavContainer>
-        <LogoContainer>
-          <Logo fill={'white'} width={'70px'} company={'.ORG'} />
-        </LogoContainer>
+        <LogoContainer>{logo}</LogoContainer>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: '7rem' }}>
+          <NavbarItems itemsColor={itemsColor}>
+            {items.map((item) => {
+              return <Item>{item}</Item>;
+            })}
+          </NavbarItems>
 
-        <NavbarItems itemsColor={itemsColor}>
-          {items.map((item) => {
-            return <Item>{item}</Item>;
-          })}
-        </NavbarItems>
-
-        <Box>
-          {withLogIn === true && !isLoggedIn ? (
+          {withLogIn === true && (
             <ButtonsContainer>
-              <Button label={'Log In'} variant={logInButton || 'primary'} />
+              <Button
+                label={'Log In'}
+                variant={logInButton || 'primary'}
+                size={'medium'}
+              />
               <Button
                 label={'Sign Up'}
                 variant={signUpButton || 'outlinePrimary'}
+                size={'medium'}
               />
             </ButtonsContainer>
-          ) : (
-            <Avatar sx={{ bgcolor: colors.orange[500] }}>N</Avatar>
           )}
         </Box>
 

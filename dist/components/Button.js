@@ -17,6 +17,7 @@ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === 
 const Button = _ref => {
   let {
     variant,
+    size,
     label,
     fullwidth,
     onClick,
@@ -25,6 +26,7 @@ const Button = _ref => {
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledButton, {
     variant: variant,
+    size: size,
     label: label,
     onClick: onClick,
     fullwidth: fullwidth,
@@ -92,6 +94,26 @@ const variantStyles = {
     }
   }
 };
+const sizeStyles = {
+  small: {
+    height: '35px',
+    lineHeight: '35px',
+    padding: '.5rem',
+    fontSize: '.875rem'
+  },
+  medium: {
+    height: '40px',
+    lineHeight: '40px',
+    padding: '.75rem',
+    fontSize: '1rem'
+  },
+  large: {
+    height: '50px',
+    lineHeight: '50px',
+    padding: '1rem',
+    fontSize: '1.2rem'
+  }
+};
 const StyledButton = _styled.default.button({
   border: 0,
   padding: '1rem',
@@ -113,11 +135,12 @@ const StyledButton = _styled.default.button({
 }, _ref2 => {
   let {
     variant = 'primary',
+    size = 'large',
     fullwidth
   } = _ref2;
-  return _objectSpread({
+  return _objectSpread(_objectSpread({
     width: fullwidth ? '100%' : 'inherit'
-  }, variantStyles[variant]);
+  }, variantStyles[variant]), sizeStyles[size]);
 });
 const Arrow = () => {
   return /*#__PURE__*/_react.default.createElement("svg", {

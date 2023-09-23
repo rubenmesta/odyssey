@@ -2,10 +2,19 @@ import React from 'react';
 import { colors } from '../utils/colors';
 import styled from '@emotion/styled';
 
-const Button = ({ variant, label, fullwidth, onClick, withArrow, style }) => {
+const Button = ({
+  variant,
+  size,
+  label,
+  fullwidth,
+  onClick,
+  withArrow,
+  style,
+}) => {
   return (
     <StyledButton
       variant={variant}
+      size={size}
       label={label}
       onClick={onClick}
       fullwidth={fullwidth}
@@ -83,6 +92,27 @@ const variantStyles = {
   },
 };
 
+const sizeStyles = {
+  small: {
+    height: '35px',
+    lineHeight: '35px',
+    padding: '.5rem',
+    fontSize: '.875rem',
+  },
+  medium: {
+    height: '40px',
+    lineHeight: '40px',
+    padding: '.75rem',
+    fontSize: '1rem',
+  },
+  large: {
+    height: '50px',
+    lineHeight: '50px',
+    padding: '1rem',
+    fontSize: '1.2rem',
+  },
+};
+
 const StyledButton = styled.button(
   {
     border: 0,
@@ -105,9 +135,10 @@ const StyledButton = styled.button(
       outline: 0,
     },
   },
-  ({ variant = 'primary', fullwidth }) => ({
+  ({ variant = 'primary', size = 'large', fullwidth }) => ({
     width: fullwidth ? '100%' : 'inherit',
     ...variantStyles[variant],
+    ...sizeStyles[size],
   })
 );
 

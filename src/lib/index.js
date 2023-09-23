@@ -1,8 +1,9 @@
 import Button from './components/Button';
-import Hero from './components/Hero';
+import Card from './components/Card';
 import Footer from './components/Footer';
+import Hero from './components/Hero';
 import Logo from './components/Logo';
 import Navbar from './components/Navbar';
-import colors from './utils/colors';
+import Section from './components/Section';
 
-export { Button, Footer, Navbar, Hero, Logo, colors };
+export { Button, Footer, Navbar, Hero, Logo, Card, Section };

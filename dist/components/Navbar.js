@@ -30,10 +30,9 @@ const Navbar = _ref => {
     items,
     background,
     itemsColor,
-    logInButton,
-    signUpButton,
+    logInButton = 'primary' || 'secondary' || 'black' || 'light' || 'utlinePrimary' || 'utlineWhite',
+    signUpButton = 'primary' || 'secondary' || 'black' || 'light' || 'utlinePrimary' || 'utlineWhite',
     withLogIn = false,
-    isLoggedIn = false,
     mobileMenuColor
   } = _ref;
   const drawerWidth = 340;
@@ -65,25 +64,25 @@ const Navbar = _ref => {
   const container = window !== undefined ? () => window.document.body : undefined;
   return /*#__PURE__*/_react.default.createElement(Navigation, {
     background: background || _colors.colors.primary[500]
-  }, /*#__PURE__*/_react.default.createElement(_CssBaseline.default, null), /*#__PURE__*/_react.default.createElement(NavContainer, null, /*#__PURE__*/_react.default.createElement(LogoContainer, null, /*#__PURE__*/_react.default.createElement(_Logo.default, {
-    fill: 'white',
-    width: '70px',
-    company: '.ORG'
-  })), /*#__PURE__*/_react.default.createElement(NavbarItems, {
+  }, /*#__PURE__*/_react.default.createElement(_CssBaseline.default, null), /*#__PURE__*/_react.default.createElement(NavContainer, null, /*#__PURE__*/_react.default.createElement(LogoContainer, null, logo), /*#__PURE__*/_react.default.createElement(_material.Box, {
+    sx: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '7rem'
+    }
+  }, /*#__PURE__*/_react.default.createElement(NavbarItems, {
     itemsColor: itemsColor
   }, items.map(item => {
     return /*#__PURE__*/_react.default.createElement(Item, null, item);
-  })), /*#__PURE__*/_react.default.createElement(_material.Box, null, withLogIn === true && !isLoggedIn ? /*#__PURE__*/_react.default.createElement(ButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
+  })), withLogIn === true && /*#__PURE__*/_react.default.createElement(ButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: 'Log In',
-    variant: logInButton || 'primary'
+    variant: logInButton || 'primary',
+    size: 'medium'
   }), /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: 'Sign Up',
-    variant: signUpButton || 'outlinePrimary'
-  })) : /*#__PURE__*/_react.default.createElement(_Avatar.default, {
-    sx: {
-      bgcolor: _colors.colors.orange[500]
-    }
-  }, "N")), /*#__PURE__*/_react.default.createElement(_IconButton.default, {
+    variant: signUpButton || 'outlinePrimary',
+    size: 'medium'
+  }))), /*#__PURE__*/_react.default.createElement(_IconButton.default, {
     color: "inherit",
     "aria-label": "open drawer",
     edge: "start",

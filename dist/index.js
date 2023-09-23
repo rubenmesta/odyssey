@@ -9,6 +9,12 @@ Object.defineProperty(exports, "Button", {
     return _Button.default;
   }
 });
+Object.defineProperty(exports, "Card", {
+  enumerable: true,
+  get: function get() {
+    return _Card.default;
+  }
+});
 Object.defineProperty(exports, "Footer", {
   enumerable: true,
   get: function get() {
@@ -33,16 +39,17 @@ Object.defineProperty(exports, "Navbar", {
     return _Navbar.default;
   }
 });
-Object.defineProperty(exports, "colors", {
+Object.defineProperty(exports, "Section", {
   enumerable: true,
   get: function get() {
-    return _colors.default;
+    return _Section.default;
   }
 });
 var _Button = _interopRequireDefault(require("./components/Button"));
-var _Hero = _interopRequireDefault(require("./components/Hero"));
+var _Card = _interopRequireDefault(require("./components/Card"));
 var _Footer = _interopRequireDefault(require("./components/Footer"));
+var _Hero = _interopRequireDefault(require("./components/Hero"));
 var _Logo = _interopRequireDefault(require("./components/Logo"));
 var _Navbar = _interopRequireDefault(require("./components/Navbar"));
-var _colors = _interopRequireDefault(require("./utils/colors"));
+var _Section = _interopRequireDefault(require("./components/Section"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

@@ -123,7 +123,7 @@ const StyledButton = styled.button(
     justifyContent: 'center',
     borderRadius: '8px',
     textDecoration: 'none',
-    fontFamily: 'Roboto Mono',
+    fontFamily: 'Roboto',
     fontWeight: 600,
     fontSize: '1rem',
 

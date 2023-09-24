@@ -52,11 +52,13 @@ function App() {
         />
 
         <Section
-          image={'/img/footer-bg.png'}
           title={'Mondays'}
           body="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
           buttonText="Learn More"
           variant={'purple'}
+          flexBasis={'100%'}
+          padding={'2rem'}
+          alignItems={'flex-start'}
         />
         <CardsContainer>
           {cards.map((card) => {

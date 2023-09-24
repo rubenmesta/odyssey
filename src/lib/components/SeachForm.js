@@ -13,6 +13,10 @@ const SearchForm = ({
   height,
   buttonVariant,
   focusColor,
+  destinationLabel,
+  startDateLabel,
+  endDateLabel,
+  travelersLabel,
 }) => {
   return (
     <Box
@@ -36,26 +40,26 @@ const SearchForm = ({
         <FormContainer>
           <InputField
             id="filled-search"
-            label="Destination"
+            label={destinationLabel}
             type="search"
             variant="outlined"
             focusColor={focusColor}
             sx={{ background: 'white', flex: 3 }}
           />
           <Date
-            label="Start Date"
+            label={startDateLabel}
             sx={{ background: 'white', flex: 2 }}
             focusColor={focusColor}
           />
           <Date
-            label="End Date"
+            label={endDateLabel}
             sx={{ background: 'white', flex: 2 }}
             focusColor={focusColor}
           />
 
           <InputField
             id="filled-search"
-            label="Travelers"
+            label={travelersLabel}
             type="number"
             variant="outlined"
             focusColor={focusColor}

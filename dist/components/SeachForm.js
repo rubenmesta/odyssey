@@ -19,7 +19,11 @@ const SearchForm = _ref => {
     backgroundColor,
     height,
     buttonVariant,
-    focusColor
+    focusColor,
+    destinationLabel,
+    startDateLabel,
+    endDateLabel,
+    travelersLabel
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(_material.Box, {
     sx: {
@@ -37,7 +41,7 @@ const SearchForm = _ref => {
     margin: '0 auto'
   }, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(FormContainer, null, /*#__PURE__*/_react.default.createElement(InputField, {
     id: "filled-search",
-    label: "Destination",
+    label: destinationLabel,
     type: "search",
     variant: "outlined",
     focusColor: focusColor,
@@ -46,14 +50,14 @@ const SearchForm = _ref => {
       flex: 3
     }
   }), /*#__PURE__*/_react.default.createElement(Date, {
-    label: "Start Date",
+    label: startDateLabel,
     sx: {
       background: 'white',
       flex: 2
     },
     focusColor: focusColor
   }), /*#__PURE__*/_react.default.createElement(Date, {
-    label: "End Date",
+    label: endDateLabel,
     sx: {
       background: 'white',
       flex: 2
@@ -61,7 +65,7 @@ const SearchForm = _ref => {
     focusColor: focusColor
   }), /*#__PURE__*/_react.default.createElement(InputField, {
     id: "filled-search",
-    label: "Travelers",
+    label: travelersLabel,
     type: "number",
     variant: "outlined",
     focusColor: focusColor,

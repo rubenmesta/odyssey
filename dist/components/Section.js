@@ -16,13 +16,20 @@ const Section = _ref => {
     body,
     variant,
     buttonText,
-    flip = false
+    flip = false,
+    flexBasis,
+    padding,
+    alignItems
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(Container, {
     flip: flip
-  }, /*#__PURE__*/_react.default.createElement(ImageSection, null, ' ', /*#__PURE__*/_react.default.createElement(StyledImage, {
+  }, image && /*#__PURE__*/_react.default.createElement(ImageSection, null, ' ', /*#__PURE__*/_react.default.createElement(StyledImage, {
     src: image
-  })), /*#__PURE__*/_react.default.createElement(ContentSection, null, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), variant && /*#__PURE__*/_react.default.createElement(_Button.default, {
+  })), /*#__PURE__*/_react.default.createElement(ContentSection, {
+    flexBasis: flexBasis,
+    padding: padding,
+    alignItems: alignItems
+  }, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), variant && /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: buttonText,
     variant: variant
   })));
@@ -46,14 +53,31 @@ const ImageSection = _styled.default.div({
   flexBasis: '50%',
   minWidth: '50%',
   height: 'auto,'
+}, _ref3 => {
+  let {
+    flexBasis
+  } = _ref3;
+  return {
+    flexBasis: flexBasis ? flexBasis : '50%'
+  };
 });
-const ContentSection = _styled.default.div({
+const ContentSection = _styled.default.nav({
   flexBasis: '50%',
   display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: '5rem 8rem'
+  flexDirection: 'column'
+}, _ref4 => {
+  let {
+    padding,
+    alignItems,
+    justifyContent,
+    flexBasis
+  } = _ref4;
+  return {
+    flexBasis: flexBasis ? flexBasis : '50%',
+    padding: padding ? padding : '5rem 8rem',
+    alignItems: alignItems ? alignItems : 'center',
+    justifyContent: justifyContent ? justifyContent : 'center'
+  };
 });
 const StyledImage = _styled.default.img({
   width: '100%',

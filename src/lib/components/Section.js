@@ -3,14 +3,30 @@ import styled from '@emotion/styled';
 import { colors } from '../utils/colors';
 import Button from './Button';
 
-const Section = ({ image, title, body, variant, buttonText, flip = false }) => {
+const Section = ({
+  image,
+  title,
+  body,
+  variant,
+  buttonText,
+  flip = false,
+  flexBasis,
+  padding,
+  alignItems,
+}) => {
   return (
     <Container flip={flip}>
-      <ImageSection>
-        {' '}
-        <StyledImage src={image} />
-      </ImageSection>
-      <ContentSection>
+      {image && (
+        <ImageSection>
+          {' '}
+          <StyledImage src={image} />
+        </ImageSection>
+      )}
+      <ContentSection
+        flexBasis={flexBasis}
+        padding={padding}
+        alignItems={alignItems}
+      >
         <Title>{title}</Title>
         <Body>{body} </Body>
         {variant && <Button label={buttonText} variant={variant} />}
@@ -30,20 +46,30 @@ const Container = styled('div', {
   background: colors.white.base,
 }));
 
-const ImageSection = styled.div({
-  flexBasis: '50%',
-  minWidth: '50%',
-  height: 'auto,',
-});
+const ImageSection = styled.div(
+  {
+    flexBasis: '50%',
+    minWidth: '50%',
+    height: 'auto,',
+  },
+  ({ flexBasis }) => ({
+    flexBasis: flexBasis ? flexBasis : '50%',
+  })
+);
 
-const ContentSection = styled.div({
-  flexBasis: '50%',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: '5rem 8rem',
-});
+const ContentSection = styled.nav(
+  {
+    flexBasis: '50%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  ({ padding, alignItems, justifyContent, flexBasis }) => ({
+    flexBasis: flexBasis ? flexBasis : '50%',
+    padding: padding ? padding : '5rem 8rem',
+    alignItems: alignItems ? alignItems : 'center',
+    justifyContent: justifyContent ? justifyContent : 'center',
+  })
+);
 
 const StyledImage = styled.img({
   width: '100%',

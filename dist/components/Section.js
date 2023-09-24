@@ -22,7 +22,7 @@ const Section = _ref => {
     flip: flip
   }, /*#__PURE__*/_react.default.createElement(ImageSection, null, ' ', /*#__PURE__*/_react.default.createElement(StyledImage, {
     src: image
-  })), /*#__PURE__*/_react.default.createElement(ContentSection, null, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), /*#__PURE__*/_react.default.createElement(_Button.default, {
+  })), /*#__PURE__*/_react.default.createElement(ContentSection, null, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), variant && /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: buttonText,
     variant: variant
   })));

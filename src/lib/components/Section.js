@@ -13,7 +13,7 @@ const Section = ({ image, title, body, variant, buttonText, flip = false }) => {
       <ContentSection>
         <Title>{title}</Title>
         <Body>{body} </Body>
-        <Button label={buttonText} variant={variant} />
+        {variant && <Button label={buttonText} variant={variant} />}
       </ContentSection>
     </Container>
   );

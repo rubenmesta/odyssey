@@ -17,6 +17,8 @@ const Hero = ({
   description,
   primaryCta,
   secondaryCta,
+  primaryCtaVariant,
+  secondaryCtaVariant,
   overlay,
   variant = 'takeover' || 'standard' || 'slim',
   contentAlignment = 'center' || 'left',
@@ -78,12 +80,17 @@ const Hero = ({
     return (
       <Box gap={2} display={'flex'}>
         {primaryCta && (
-          <Button withArrow variant="primary" size="large" label={primaryCta} />
+          <Button
+            withArrow
+            variant={primaryCtaVariant || 'primary'}
+            size="large"
+            label={primaryCta}
+          />
         )}
         {secondaryCta && (
           <Button
             withArrow
-            variant="outlinePrimary"
+            variant={secondaryCtaVariant || 'outlinePrimary'}
             size="large"
             label={secondaryCta}
           />

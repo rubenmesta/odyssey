@@ -26,6 +26,8 @@ const Hero = _ref => {
     description,
     primaryCta,
     secondaryCta,
+    primaryCtaVariant,
+    secondaryCtaVariant,
     overlay,
     variant = 'takeover' || 'standard' || 'slim',
     contentAlignment = 'center' || 'left',
@@ -81,12 +83,12 @@ const Hero = _ref => {
       display: 'flex'
     }, primaryCta && /*#__PURE__*/_react.default.createElement(_Button.default, {
       withArrow: true,
-      variant: "primary",
+      variant: primaryCtaVariant || 'primary',
       size: "large",
       label: primaryCta
     }), secondaryCta && /*#__PURE__*/_react.default.createElement(_Button.default, {
       withArrow: true,
-      variant: "outlinePrimary",
+      variant: secondaryCtaVariant || 'outlinePrimary',
       size: "large",
       label: secondaryCta
     }));

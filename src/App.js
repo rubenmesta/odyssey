@@ -64,7 +64,6 @@ function App() {
           {cards.map((card) => {
             return (
               <Card
-                image={card.image}
                 title={card.title}
                 body={card.body}
                 buttonText={card.buttonText}

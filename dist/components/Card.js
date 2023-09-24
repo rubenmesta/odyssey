@@ -16,9 +16,12 @@ const Card = _ref => {
     title,
     body,
     variant,
-    buttonText
+    buttonText,
+    width
   } = _ref;
-  return /*#__PURE__*/_react.default.createElement(StyledCard, null, /*#__PURE__*/_react.default.createElement("div", null, ' ', /*#__PURE__*/_react.default.createElement(StyledImage, {
+  return /*#__PURE__*/_react.default.createElement(StyledCard, {
+    width: width
+  }, image && /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(StyledImage, {
     src: image
   })), /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(_material.Box, {
     sx: {
@@ -39,8 +42,14 @@ const StyledCard = _styled.default.div({
   border: "1px solid ".concat(_colors.colors.grey[300]),
   borderRadius: '8px',
   color: _colors.colors.black[800],
-  width: '350px',
   background: _colors.colors.white[500]
+}, _ref2 => {
+  let {
+    width
+  } = _ref2;
+  return {
+    width: width ? width : '350px'
+  };
 });
 const StyledImage = _styled.default.img({
   width: '100%',

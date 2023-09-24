@@ -30,10 +30,12 @@ const Hero = ({
     switch (variant) {
       case 'takeover':
         return 'calc(100vh - 80px)';
-      case 'standard':
+      case 'large':
         return '80vh';
-      case 'slim':
+      case 'medium':
         return '60vh';
+      case 'small':
+        return '40vh';
       default:
         return '80vh';
     }

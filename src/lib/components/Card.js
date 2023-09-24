@@ -4,13 +4,14 @@ import { colors } from '../utils/colors';
 import Button from './Button';
 import { Box } from '@mui/material';
 
-const Card = ({ image, title, body, variant, buttonText }) => {
+const Card = ({ image, title, body, variant, buttonText, width }) => {
   return (
-    <StyledCard>
-      <div>
-        {' '}
-        <StyledImage src={image} />
-      </div>
+    <StyledCard width={width}>
+      {image && (
+        <div>
+          <StyledImage src={image} />
+        </div>
+      )}
       <Container>
         <Box
           sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
@@ -27,15 +28,19 @@ const Card = ({ image, title, body, variant, buttonText }) => {
   );
 };
 
-const StyledCard = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  border: `1px solid ${colors.grey[300]}`,
-  borderRadius: '8px',
-  color: colors.black[800],
-  width: '350px',
-  background: colors.white[500],
-});
+const StyledCard = styled.div(
+  {
+    display: 'flex',
+    flexDirection: 'column',
+    border: `1px solid ${colors.grey[300]}`,
+    borderRadius: '8px',
+    color: colors.black[800],
+    background: colors.white[500],
+  },
+  ({ width }) => ({
+    width: width ? width : '350px',
+  })
+);
 
 const StyledImage = styled.img({
   width: '100%',

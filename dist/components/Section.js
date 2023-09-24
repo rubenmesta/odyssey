@@ -61,7 +61,7 @@ const ImageSection = _styled.default.div({
     flexBasis: flexBasis ? flexBasis : '50%'
   };
 });
-const ContentSection = _styled.default.nav({
+const ContentSection = _styled.default.div({
   flexBasis: '50%',
   display: 'flex',
   flexDirection: 'column'

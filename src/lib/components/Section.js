@@ -57,7 +57,7 @@ const ImageSection = styled.div(
   })
 );
 
-const ContentSection = styled.nav(
+const ContentSection = styled.div(
   {
     flexBasis: '50%',
     display: 'flex',

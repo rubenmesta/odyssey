@@ -20,6 +20,14 @@ import { theme } from './theme';
 function App() {
   const { navItems, col1, col2, col3, social } = data;
 
+  const news = {
+    image: '/img/card1.webp',
+    title: "NASA's Perseverance Rover Discovers Ancient Riverbed on Mars",
+    body: "This is a significant milestone in our quest to understand the history of water on Mars and, importantly, whether the planet ever supported life,\" said Dr. Sarah Johnson, a planetary geologist at NASA's Jet Propulsion Laboratory.\n\nScientists are excited about the potential of the rock samples Perseverance will collect from this region. These samples may hold clues about Mars' ancient climate and whether it was ever habitable. Future missions to Mars, including sample return missions, will play a crucial role in unlocking the secrets of the Red Planet.\n\nNASA's Perseverance rover continues to make groundbreaking discoveries on Mars, and each new finding brings us closer to answering the age-old question: Is there, or was there ever, life on Mars?",
+    variant: 'purple',
+    buttonText: 'Learn More',
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -72,6 +80,14 @@ function App() {
             color={colors.secondary[100]}
           />
         </Box>
+        <Section
+          title={news.title}
+          body={news.body}
+          style={{ padding: 0 }}
+          flexBasis="100%"
+          padding="0 8rem"
+          fontSize={'4rem'}
+        />
         <CardsContainer>
           {cards.map((card) => {
             return (

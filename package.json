@@ -1,6 +1,6 @@
 {
   "name": "odyssey-design-system",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Reac component library",
   "private": false,
   "main": "dist/index.js",

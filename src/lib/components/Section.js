@@ -15,6 +15,7 @@ const Section = ({
   alignItems,
   background,
   color,
+  fontSize,
 }) => {
   return (
     <Container flip={flip} background={background || colors.white.base}>
@@ -30,7 +31,7 @@ const Section = ({
         alignItems={alignItems}
         color={color || colors.black[800]}
       >
-        <Title>{title}</Title>
+        <Title fontSize={fontSize || '4rem'}>{title}</Title>
         <Body>{body} </Body>
         {variant && (
           <Button
@@ -86,18 +87,24 @@ const StyledImage = styled.img({
   height: 'auto',
 });
 
-const Title = styled.h2({
-  fontFamily: 'IBM Plex Serif',
-  color: colors.black.base,
-  fontSize: '4rem',
-  margin: 0,
-});
+const Title = styled.h2(
+  {
+    fontFamily: 'IBM Plex Serif',
+    color: colors.black.base,
+    fontSize: '4rem',
+    margin: 0,
+    lineHeight: 1.2,
+  },
+  ({ fontSize }) => ({
+    fontSize: fontSize,
+  })
+);
 
 const Body = styled.p({
   fontFamily: 'IBM Plex Mono',
   fontSize: '1rem',
   color: colors.black.dark,
-  lineHeight: 1.5,
+  lineHeight: 1.8,
   margin: '3rem 0',
 });
 

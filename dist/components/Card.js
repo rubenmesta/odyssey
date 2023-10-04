@@ -73,7 +73,7 @@ const Body = _styled.default.p({
   fontFamily: 'IBM Plex Mono',
   fontSize: '1rem',
   color: _colors.colors.black[800],
-  lineHeight: 1.5
+  lineHeight: 1.8
 });
 var _default = Card;
 exports.default = _default;

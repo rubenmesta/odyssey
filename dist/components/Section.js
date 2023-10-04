@@ -21,7 +21,8 @@ const Section = _ref => {
     padding,
     alignItems,
     background,
-    color
+    color,
+    fontSize
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(Container, {
     flip: flip,
@@ -33,7 +34,9 @@ const Section = _ref => {
     padding: padding,
     alignItems: alignItems,
     color: color || _colors.colors.black[800]
-  }, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), variant && /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, /*#__PURE__*/_react.default.createElement(Title, {
+    fontSize: fontSize || '4rem'
+  }, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), variant && /*#__PURE__*/_react.default.createElement(_Button.default, {
     style: {
       width: '40%'
     },
@@ -97,13 +100,21 @@ const Title = _styled.default.h2({
   fontFamily: 'IBM Plex Serif',
   color: _colors.colors.black.base,
   fontSize: '4rem',
-  margin: 0
+  margin: 0,
+  lineHeight: 1.2
+}, _ref5 => {
+  let {
+    fontSize
+  } = _ref5;
+  return {
+    fontSize: fontSize
+  };
 });
 const Body = _styled.default.p({
   fontFamily: 'IBM Plex Mono',
   fontSize: '1rem',
   color: _colors.colors.black.dark,
-  lineHeight: 1.5,
+  lineHeight: 1.8,
   margin: '3rem 0'
 });
 var _default = Section;

@@ -38,3 +38,21 @@ export const cards = [
     variant: 'secondary',
   },
 ];
+
+export const sections = [
+  {
+    image: '/img/unsplash2.jpg',
+    title: 'Featured Destinations',
+    body: 'Experience the Red Planet like never before. Join our Mars Expedition for an unforgettable journey.',
+    variant: 'primary',
+    buttonText: 'Learn More',
+  },
+  {
+    image: '/img/unsplash3.jpg',
+    title: 'Explore the Universe',
+    body: 'Embark on a journey to the cosmos and discover the wonders of space travel. Our space adventures offer once-in-a-lifetime experiences that will leave you in awe of the universe.',
+    variant: 'primary',
+    buttonText: 'View Destinations',
+    flip: true,
+  },
+];

@@ -35,7 +35,7 @@ const Footer = ({
 
         <FooterContent>
           <FooterLogo>
-            <img src={logo} />
+            {logo}
             <FooterQuote>Travel beyond</FooterQuote>
           </FooterLogo>
 

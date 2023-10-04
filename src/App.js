@@ -9,6 +9,7 @@ import * as data from './data';
 import Card from './lib/components/Card';
 import Section from './lib/components/Section';
 import styled from '@emotion/styled';
+import Logo2 from './lib/components/Logo2';
 import Logo from './lib/components/Logo';
 import { SearchForm } from './lib';
 import { cards } from './data';
@@ -96,6 +97,7 @@ function App() {
             '/img/linkedin.svg',
           ]}
           avatar={'/img/footer-avatar.svg'}
+          logo={<Logo2 width={200} />}
         />
       </LocalizationProvider>
     </ThemeProvider>

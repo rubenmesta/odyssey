@@ -18,6 +18,7 @@ const Footer = _ref => {
     col3,
     social,
     avatar,
+    logo,
     background,
     buttonVariant
   } = _ref;
@@ -29,7 +30,7 @@ const Footer = _ref => {
   }))), /*#__PURE__*/_react.default.createElement(FooterAvatar, null, /*#__PURE__*/_react.default.createElement("img", {
     src: avatar
   }))), /*#__PURE__*/_react.default.createElement(FooterContent, null, /*#__PURE__*/_react.default.createElement(FooterLogo, null, /*#__PURE__*/_react.default.createElement("img", {
-    src: "/img/IPTS-logo-white.svg"
+    src: logo
   }), /*#__PURE__*/_react.default.createElement(FooterQuote, null, "Travel beyond")), /*#__PURE__*/_react.default.createElement(FooterGrid, null, /*#__PURE__*/_react.default.createElement(_material.Box, null, col1 === null || col1 === void 0 ? void 0 : col1.map(item => {
     return /*#__PURE__*/_react.default.createElement(Item, null, item);
   })), /*#__PURE__*/_react.default.createElement(_material.Box, null, col2 === null || col2 === void 0 ? void 0 : col2.map(item => {

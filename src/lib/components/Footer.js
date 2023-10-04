@@ -11,6 +11,7 @@ const Footer = ({
   col3,
   social,
   avatar,
+  logo,
   background,
   buttonVariant,
 }) => {
@@ -34,7 +35,7 @@ const Footer = ({
 
         <FooterContent>
           <FooterLogo>
-            <img src="/img/IPTS-logo-white.svg" />
+            <img src={logo} />
             <FooterQuote>Travel beyond</FooterQuote>
           </FooterLogo>
 

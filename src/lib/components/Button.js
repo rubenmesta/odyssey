@@ -32,38 +32,38 @@ const Button = ({
 
 const variantStyles = {
   primary: {
-    backgroundColor: colors.primary[500],
-    color: colors.black[500],
-    border: `1px solid ${colors.primary[500]}`,
+    backgroundColor: colors.primary[900],
+    color: colors.white[500],
+    border: `1px solid ${colors.primary[900]}`,
     '&:hover': {
-      backgroundColor: colors.primary[400],
-      border: `1px solid ${colors.primary[400]}`,
+      backgroundColor: colors.primary[800],
+      border: `1px solid ${colors.primary[800]}`,
     },
   },
   secondary: {
-    backgroundColor: colors.secondary[500],
-    color: colors.white[500],
-    border: `1px solid ${colors.secondary[500]}`,
+    backgroundColor: colors.secondary[100],
+    color: colors.black[800],
+    border: `1px solid ${colors.secondary[100]}`,
 
     '&:hover': {
-      backgroundColor: colors.secondary[400],
-      border: `1px solid ${colors.secondary[400]}`,
+      backgroundColor: colors.secondary[200],
+      border: `1px solid ${colors.secondary[200]}`,
     },
   },
   black: {
     backgroundColor: colors.black[500],
-    color: colors.grey[200],
+    color: colors.neutrals[200],
     border: `1px solid ${colors.black[500]}`,
 
     '&:hover': {
-      backgroundColor: colors.grey[800],
-      border: `1px solid ${colors.grey[800]}`,
+      backgroundColor: colors.neutrals[800],
+      border: `1px solid ${colors.neutrals[800]}`,
     },
   },
   purple: {
-    backgroundColor: colors.purple[800],
+    backgroundColor: colors.purple[600],
     color: colors.white[500],
-    border: `1px solid ${colors.purple[800]}`,
+    border: `1px solid ${colors.purple[600]}`,
 
     '&:hover': {
       backgroundColor: colors.purple[700],
@@ -72,12 +72,12 @@ const variantStyles = {
   },
   outlinePrimary: {
     backgroundColor: 'transparent',
-    color: colors.primary[500],
-    border: `1px solid ${colors.primary[500]}`,
+    color: colors.white[500],
+    border: `1px solid ${colors.secondary[100]}`,
 
     '&:hover': {
-      color: colors.grey[200],
-      borderColor: colors.grey[200],
+      color: colors.purple[200],
+      borderColor: colors.purple[200],
     },
   },
   outlineWhite: {
@@ -86,8 +86,8 @@ const variantStyles = {
     border: `1px solid ${colors.white[500]}`,
 
     '&:hover': {
-      color: colors.grey[200],
-      borderColor: colors.grey[200],
+      color: colors.neutrals[200],
+      borderColor: colors.neutrals[200],
     },
   },
 };
@@ -123,7 +123,7 @@ const StyledButton = styled.button(
     justifyContent: 'center',
     borderRadius: '8px',
     textDecoration: 'none',
-    fontFamily: 'Roboto',
+    fontFamily: 'IBM Plex Mono',
     fontWeight: 600,
     fontSize: '1rem',
 

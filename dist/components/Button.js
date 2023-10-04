@@ -40,36 +40,36 @@ const Button = _ref => {
 };
 const variantStyles = {
   primary: {
-    backgroundColor: _colors.colors.primary[500],
-    color: _colors.colors.black[500],
-    border: "1px solid ".concat(_colors.colors.primary[500]),
+    backgroundColor: _colors.colors.primary[900],
+    color: _colors.colors.white[500],
+    border: "1px solid ".concat(_colors.colors.primary[900]),
     '&:hover': {
-      backgroundColor: _colors.colors.primary[400],
-      border: "1px solid ".concat(_colors.colors.primary[400])
+      backgroundColor: _colors.colors.primary[800],
+      border: "1px solid ".concat(_colors.colors.primary[800])
     }
   },
   secondary: {
-    backgroundColor: _colors.colors.secondary[500],
-    color: _colors.colors.white[500],
-    border: "1px solid ".concat(_colors.colors.secondary[500]),
+    backgroundColor: _colors.colors.secondary[100],
+    color: _colors.colors.black[800],
+    border: "1px solid ".concat(_colors.colors.secondary[100]),
     '&:hover': {
-      backgroundColor: _colors.colors.secondary[400],
-      border: "1px solid ".concat(_colors.colors.secondary[400])
+      backgroundColor: _colors.colors.secondary[200],
+      border: "1px solid ".concat(_colors.colors.secondary[200])
     }
   },
   black: {
     backgroundColor: _colors.colors.black[500],
-    color: _colors.colors.grey[200],
+    color: _colors.colors.neutrals[200],
     border: "1px solid ".concat(_colors.colors.black[500]),
     '&:hover': {
-      backgroundColor: _colors.colors.grey[800],
-      border: "1px solid ".concat(_colors.colors.grey[800])
+      backgroundColor: _colors.colors.neutrals[800],
+      border: "1px solid ".concat(_colors.colors.neutrals[800])
     }
   },
   purple: {
-    backgroundColor: _colors.colors.purple[800],
+    backgroundColor: _colors.colors.purple[600],
     color: _colors.colors.white[500],
-    border: "1px solid ".concat(_colors.colors.purple[800]),
+    border: "1px solid ".concat(_colors.colors.purple[600]),
     '&:hover': {
       backgroundColor: _colors.colors.purple[700],
       border: "1px solid ".concat(_colors.colors.purple[700])
@@ -77,11 +77,11 @@ const variantStyles = {
   },
   outlinePrimary: {
     backgroundColor: 'transparent',
-    color: _colors.colors.primary[500],
-    border: "1px solid ".concat(_colors.colors.primary[500]),
+    color: _colors.colors.white[500],
+    border: "1px solid ".concat(_colors.colors.secondary[100]),
     '&:hover': {
-      color: _colors.colors.grey[200],
-      borderColor: _colors.colors.grey[200]
+      color: _colors.colors.purple[200],
+      borderColor: _colors.colors.purple[200]
     }
   },
   outlineWhite: {
@@ -89,8 +89,8 @@ const variantStyles = {
     color: _colors.colors.white[500],
     border: "1px solid ".concat(_colors.colors.white[500]),
     '&:hover': {
-      color: _colors.colors.grey[200],
-      borderColor: _colors.colors.grey[200]
+      color: _colors.colors.neutrals[200],
+      borderColor: _colors.colors.neutrals[200]
     }
   }
 };
@@ -123,7 +123,7 @@ const StyledButton = _styled.default.button({
   justifyContent: 'center',
   borderRadius: '8px',
   textDecoration: 'none',
-  fontFamily: 'Roboto',
+  fontFamily: 'IBM Plex Mono',
   fontWeight: 600,
   fontSize: '1rem',
   '&:hover': {

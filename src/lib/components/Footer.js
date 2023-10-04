@@ -12,14 +12,10 @@ const Footer = ({
   social,
   avatar,
   background,
-  backgroundImage,
   buttonVariant,
 }) => {
   return (
-    <StyledFooter
-      background={background || colors.black[800]}
-      backgroundImage={backgroundImage}
-    >
+    <StyledFooter background={background || colors.primary[900]}>
       <FooterContainer>
         <FooterHero>
           <FooterContact>
@@ -72,14 +68,12 @@ const Footer = ({
 
 const StyledFooter = styled.footer(
   {
-    color: colors.white.base,
+    color: colors.white[500],
     width: '100%',
     padding: '65px 0',
   },
-  ({ background, backgroundImage }) => ({
+  ({ background }) => ({
     background: background,
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
   })
 );
 
@@ -145,10 +139,10 @@ const FooterLogo = styled.div({
 });
 
 const FooterQuote = styled.div({
-  color: colors.grey[400],
+  color: colors.neutrals[400],
   maxWidth: '100%',
   marginTop: '20px',
-  fontFamily: 'Inter,sans-serif',
+  fontFamily: 'IBM Plex Serif',
   fontSize: '16px',
   lineHeight: '1.7em',
 });
@@ -165,9 +159,9 @@ const FooterGrid = styled.div({
 
 const Item = styled.div({
   lineHeight: 1.5,
-  color: colors.grey[400],
+  color: colors.neutrals[400],
   marginBottom: '10px',
-  fontFamily: 'Roboto Mono',
+  fontFamily: 'IBM Plex Mono',
   fontSize: '16px',
   textDecoration: 'none',
   display: 'block',

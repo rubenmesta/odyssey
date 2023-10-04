@@ -32,7 +32,7 @@ const StyledCard = styled.div(
   {
     display: 'flex',
     flexDirection: 'column',
-    border: `1px solid ${colors.grey[300]}`,
+    border: `1px solid ${colors.neutrals[300]}`,
     borderRadius: '8px',
     color: colors.black[800],
     background: colors.white[500],
@@ -57,8 +57,7 @@ const Container = styled.div({
 });
 
 const Title = styled.h4({
-  fontFamily: 'Anton',
-  fontSize: '1.5rem',
+  fontSize: '1.75rem',
   color: colors.black[800],
   margin: 0,
 });

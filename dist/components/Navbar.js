@@ -61,7 +61,7 @@ const Navbar = _ref => {
   }))))));
   const container = window !== undefined ? () => window.document.body : undefined;
   return /*#__PURE__*/_react.default.createElement(Navigation, {
-    background: background || _colors.colors.primary[500]
+    background: background || _colors.colors.primary[900]
   }, /*#__PURE__*/_react.default.createElement(_CssBaseline.default, null), /*#__PURE__*/_react.default.createElement(NavContainer, null, /*#__PURE__*/_react.default.createElement(LogoContainer, null, logo), /*#__PURE__*/_react.default.createElement(_material.Box, {
     sx: {
       display: 'flex',
@@ -74,7 +74,7 @@ const Navbar = _ref => {
     return /*#__PURE__*/_react.default.createElement(Item, null, item);
   })), withLogIn === true && /*#__PURE__*/_react.default.createElement(ButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: buttonLabel,
-    variant: variant || 'primary',
+    variant: variant || 'secondary',
     size: 'medium'
   }))), /*#__PURE__*/_react.default.createElement(_IconButton.default, {
     color: "inherit",
@@ -136,32 +136,17 @@ const LogoContainer = _styled.default.div({
     width: '70px'
   }
 });
-const NavbarItemContainers = _styled.default.div({
+const NavbarItems = _styled.default.div({
   display: 'flex',
-  fontFamily: 'Roboto Mono',
+  fontFamily: 'IBM Plex Mono',
   display: 'none',
-  [_media.MEDIA_QUERIES.tablet]: {
+  [_media.MEDIA_QUERIES.desktop]: {
     display: 'flex'
   }
 }, _ref3 => {
   let {
     itemsColor
   } = _ref3;
-  return {
-    color: itemsColor
-  };
-});
-const NavbarItems = _styled.default.div({
-  display: 'flex',
-  fontFamily: 'Roboto Mono',
-  display: 'none',
-  [_media.MEDIA_QUERIES.desktop]: {
-    display: 'flex'
-  }
-}, _ref4 => {
-  let {
-    itemsColor
-  } = _ref4;
   return {
     color: itemsColor
   };

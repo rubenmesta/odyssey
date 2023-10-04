@@ -19,17 +19,24 @@ const Section = _ref => {
     flip = false,
     flexBasis,
     padding,
-    alignItems
+    alignItems,
+    background,
+    color
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(Container, {
-    flip: flip
+    flip: flip,
+    background: background || _colors.colors.white.base
   }, image && /*#__PURE__*/_react.default.createElement(ImageSection, null, ' ', /*#__PURE__*/_react.default.createElement(StyledImage, {
     src: image
   })), /*#__PURE__*/_react.default.createElement(ContentSection, {
     flexBasis: flexBasis,
     padding: padding,
-    alignItems: alignItems
+    alignItems: alignItems,
+    color: color || _colors.colors.black[800]
   }, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(Body, null, body, " "), variant && /*#__PURE__*/_react.default.createElement(_Button.default, {
+    style: {
+      width: '40%'
+    },
     label: buttonText,
     variant: variant
   })));
@@ -38,7 +45,8 @@ const Container = (0, _styled.default)('div', {
   shouldForwardProp: prop => prop !== 'flip'
 })(_ref2 => {
   let {
-    flip
+    flip,
+    background
   } = _ref2;
   return {
     display: 'flex',
@@ -46,7 +54,7 @@ const Container = (0, _styled.default)('div', {
     color: _colors.colors.black.base,
     width: '100%',
     height: 'auto',
-    background: _colors.colors.white.base
+    background: background
   };
 });
 const ImageSection = _styled.default.div({
@@ -67,6 +75,7 @@ const ContentSection = _styled.default.div({
   flexDirection: 'column'
 }, _ref4 => {
   let {
+    color,
     padding,
     alignItems,
     justifyContent,
@@ -76,7 +85,8 @@ const ContentSection = _styled.default.div({
     flexBasis: flexBasis ? flexBasis : '50%',
     padding: padding ? padding : '5rem 8rem',
     alignItems: alignItems ? alignItems : 'center',
-    justifyContent: justifyContent ? justifyContent : 'center'
+    justifyContent: justifyContent ? justifyContent : 'center',
+    color: color
   };
 });
 const StyledImage = _styled.default.img({
@@ -90,7 +100,7 @@ const Title = _styled.default.h2({
   margin: 0
 });
 const Body = _styled.default.p({
-  fontFamily: 'Roboto',
+  fontFamily: 'IBM Plex Mono',
   fontSize: '1rem',
   color: _colors.colors.black.dark,
   lineHeight: 1.5,

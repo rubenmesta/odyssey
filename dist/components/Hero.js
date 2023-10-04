@@ -85,12 +85,12 @@ const Hero = _ref => {
       display: 'flex'
     }, primaryCta && /*#__PURE__*/_react.default.createElement(_Button.default, {
       withArrow: true,
-      variant: primaryCtaVariant || 'primary',
+      variant: primaryCtaVariant || 'purple',
       size: "large",
       label: primaryCta
     }), secondaryCta && /*#__PURE__*/_react.default.createElement(_Button.default, {
       withArrow: true,
-      variant: secondaryCtaVariant || 'outlinePrimary',
+      variant: secondaryCtaVariant || 'outlineWhite',
       size: "large",
       label: secondaryCta
     }));
@@ -144,22 +144,21 @@ const Title = (0, _styled.default)(_material.Typography)({
   '&.MuiTypography-root': {
     color: '#fff',
     letterSpacing: '2px',
-    fontFamily: 'Anton',
+    fontFamily: 'IBM Plex serif',
+    fontWeight: 700,
     fontSize: '5rem',
     lineHeight: 1,
     marginBottom: '1rem'
   }
 });
 const Subtitle = (0, _styled.default)(_material.Typography)({
-  '&.MuiTypography-root': {
-    color: '#fff',
-    letterSpacing: '2px',
-    fontSize: '1.5rem',
-    lineHeight: 1,
-    fontWeight: 200,
-    marginBottom: '1rem',
-    fontFamily: 'Roboto'
-  }
+  color: '#fff',
+  letterSpacing: '2px',
+  fontSize: '1.5rem',
+  lineHeight: 1,
+  fontWeight: 200,
+  marginBottom: '1rem',
+  fontFamily: 'IBM Plex Mono'
 });
 const InnerContainer = (0, _styled.default)(_material.Box)({
   height: 'auto'

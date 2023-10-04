@@ -84,7 +84,7 @@ const Hero = ({
         {primaryCta && (
           <Button
             withArrow
-            variant={primaryCtaVariant || 'primary'}
+            variant={primaryCtaVariant || 'purple'}
             size="large"
             label={primaryCta}
           />
@@ -92,7 +92,7 @@ const Hero = ({
         {secondaryCta && (
           <Button
             withArrow
-            variant={secondaryCtaVariant || 'outlinePrimary'}
+            variant={secondaryCtaVariant || 'outlineWhite'}
             size="large"
             label={secondaryCta}
           />
@@ -166,7 +166,8 @@ const Title = styled(Typography)({
   '&.MuiTypography-root': {
     color: '#fff',
     letterSpacing: '2px',
-    fontFamily: 'Anton',
+    fontFamily: 'IBM Plex serif',
+    fontWeight: 700,
     fontSize: '5rem',
     lineHeight: 1,
     marginBottom: '1rem',
@@ -174,15 +175,13 @@ const Title = styled(Typography)({
 });
 
 const Subtitle = styled(Typography)({
-  '&.MuiTypography-root': {
-    color: '#fff',
-    letterSpacing: '2px',
-    fontSize: '1.5rem',
-    lineHeight: 1,
-    fontWeight: 200,
-    marginBottom: '1rem',
-    fontFamily: 'Roboto',
-  },
+  color: '#fff',
+  letterSpacing: '2px',
+  fontSize: '1.5rem',
+  lineHeight: 1,
+  fontWeight: 200,
+  marginBottom: '1rem',
+  fontFamily: 'IBM Plex Mono',
 });
 
 const InnerContainer = styled(Box)({

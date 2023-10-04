@@ -39,7 +39,7 @@ const Card = _ref => {
 const StyledCard = _styled.default.div({
   display: 'flex',
   flexDirection: 'column',
-  border: "1px solid ".concat(_colors.colors.grey[300]),
+  border: "1px solid ".concat(_colors.colors.neutrals[300]),
   borderRadius: '8px',
   color: _colors.colors.black[800],
   background: _colors.colors.white[500]
@@ -64,8 +64,7 @@ const Container = _styled.default.div({
   flexGrow: 1
 });
 const Title = _styled.default.h4({
-  fontFamily: 'Anton',
-  fontSize: '1.5rem',
+  fontSize: '1.75rem',
   color: _colors.colors.black[800],
   margin: 0
 });

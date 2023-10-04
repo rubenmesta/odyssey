@@ -19,12 +19,10 @@ const Footer = _ref => {
     social,
     avatar,
     background,
-    backgroundImage,
     buttonVariant
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledFooter, {
-    background: background || _colors.colors.black[800],
-    backgroundImage: backgroundImage
+    background: background || _colors.colors.primary[900]
   }, /*#__PURE__*/_react.default.createElement(FooterContainer, null, /*#__PURE__*/_react.default.createElement(FooterHero, null, /*#__PURE__*/_react.default.createElement(FooterContact, null, /*#__PURE__*/_react.default.createElement(FooterContactTitle, null, title), /*#__PURE__*/_react.default.createElement(ButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
     label: 'Sign Up for Free',
     variant: buttonVariant || 'outlinePrimary'
@@ -45,18 +43,15 @@ const Footer = _ref => {
   })))))));
 };
 const StyledFooter = _styled.default.footer({
-  color: _colors.colors.white.base,
+  color: _colors.colors.white[500],
   width: '100%',
   padding: '65px 0'
 }, _ref2 => {
   let {
-    background,
-    backgroundImage
+    background
   } = _ref2;
   return {
-    background: background,
-    backgroundImage: "url(".concat(backgroundImage, ")"),
-    backgroundSize: 'cover'
+    background: background
   };
 });
 const FooterContainer = _styled.default.div({
@@ -113,10 +108,10 @@ const FooterLogo = _styled.default.div({
   }
 });
 const FooterQuote = _styled.default.div({
-  color: _colors.colors.grey[400],
+  color: _colors.colors.neutrals[400],
   maxWidth: '100%',
   marginTop: '20px',
-  fontFamily: 'Inter,sans-serif',
+  fontFamily: 'IBM Plex Serif',
   fontSize: '16px',
   lineHeight: '1.7em'
 });
@@ -131,9 +126,9 @@ const FooterGrid = _styled.default.div({
 });
 const Item = _styled.default.div({
   lineHeight: 1.5,
-  color: _colors.colors.grey[400],
+  color: _colors.colors.neutrals[400],
   marginBottom: '10px',
-  fontFamily: 'Roboto Mono',
+  fontFamily: 'IBM Plex Mono',
   fontSize: '16px',
   textDecoration: 'none',
   display: 'block'

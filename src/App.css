@@ -6,6 +6,19 @@
   height: 40vmin;
   pointer-events: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'IBM Plex Serif', serif !important;
+}
+
+body,
+a {
+  font-family: 'IBM Plex Mono', monospace;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

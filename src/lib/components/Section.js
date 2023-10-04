@@ -13,9 +13,11 @@ const Section = ({
   flexBasis,
   padding,
   alignItems,
+  background,
+  color,
 }) => {
   return (
-    <Container flip={flip}>
+    <Container flip={flip} background={background || colors.white.base}>
       {image && (
         <ImageSection>
           {' '}
@@ -26,10 +28,17 @@ const Section = ({
         flexBasis={flexBasis}
         padding={padding}
         alignItems={alignItems}
+        color={color || colors.black[800]}
       >
         <Title>{title}</Title>
         <Body>{body} </Body>
-        {variant && <Button label={buttonText} variant={variant} />}
+        {variant && (
+          <Button
+            style={{ width: '40%' }}
+            label={buttonText}
+            variant={variant}
+          />
+        )}
       </ContentSection>
     </Container>
   );
@@ -37,13 +46,13 @@ const Section = ({
 
 const Container = styled('div', {
   shouldForwardProp: (prop) => prop !== 'flip',
-})(({ flip }) => ({
+})(({ flip, background }) => ({
   display: 'flex',
   flexDirection: flip ? 'row-reverse' : 'row',
   color: colors.black.base,
   width: '100%',
   height: 'auto',
-  background: colors.white.base,
+  background: background,
 }));
 
 const ImageSection = styled.div(
@@ -63,11 +72,12 @@ const ContentSection = styled.div(
     display: 'flex',
     flexDirection: 'column',
   },
-  ({ padding, alignItems, justifyContent, flexBasis }) => ({
+  ({ color, padding, alignItems, justifyContent, flexBasis }) => ({
     flexBasis: flexBasis ? flexBasis : '50%',
     padding: padding ? padding : '5rem 8rem',
     alignItems: alignItems ? alignItems : 'center',
     justifyContent: justifyContent ? justifyContent : 'center',
+    color: color,
   })
 );
 
@@ -84,7 +94,7 @@ const Title = styled.h2({
 });
 
 const Body = styled.p({
-  fontFamily: 'Roboto',
+  fontFamily: 'IBM Plex Mono',
   fontSize: '1rem',
   color: colors.black.dark,
   lineHeight: 1.5,

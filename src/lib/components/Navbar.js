@@ -57,7 +57,7 @@ const Navbar = ({
     window !== undefined ? () => window.document.body : undefined;
 
   return (
-    <Navigation background={background || colors.primary[500]}>
+    <Navigation background={background || colors.primary[900]}>
       <CssBaseline />
 
       <NavContainer>
@@ -73,7 +73,7 @@ const Navbar = ({
             <ButtonsContainer>
               <Button
                 label={buttonLabel}
-                variant={variant || 'primary'}
+                variant={variant || 'secondary'}
                 size={'medium'}
               />
             </ButtonsContainer>
@@ -144,25 +144,10 @@ const LogoContainer = styled.div({
   },
 });
 
-const NavbarItemContainers = styled.div(
-  {
-    display: 'flex',
-    fontFamily: 'Roboto Mono',
-    display: 'none',
-
-    [MEDIA_QUERIES.tablet]: {
-      display: 'flex',
-    },
-  },
-  ({ itemsColor }) => ({
-    color: itemsColor,
-  })
-);
-
 const NavbarItems = styled.div(
   {
     display: 'flex',
-    fontFamily: 'Roboto Mono',
+    fontFamily: 'IBM Plex Mono',
     display: 'none',
 
     [MEDIA_QUERIES.desktop]: {

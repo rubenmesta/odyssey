@@ -39,7 +39,9 @@ const SearchForm = _ref => {
     flexDirection: 'column',
     justifyContent: 'center',
     margin: '0 auto'
-  }, /*#__PURE__*/_react.default.createElement(Title, null, title), /*#__PURE__*/_react.default.createElement(FormContainer, null, /*#__PURE__*/_react.default.createElement(InputField, {
+  }, /*#__PURE__*/_react.default.createElement(Title, {
+    color: labelColor
+  }, title), /*#__PURE__*/_react.default.createElement(FormContainer, null, /*#__PURE__*/_react.default.createElement(InputField, {
     id: "filled-search",
     label: destinationLabel,
     type: "search",

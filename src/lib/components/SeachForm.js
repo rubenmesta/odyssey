@@ -36,7 +36,7 @@ const SearchForm = ({
         justifyContent={'center'}
         margin={'0 auto'}
       >
-        <Title>{title}</Title>
+        <Title color={labelColor}>{title}</Title>
         <FormContainer>
           <InputField
             id="filled-search"

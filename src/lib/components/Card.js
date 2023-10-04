@@ -60,10 +60,11 @@ const Title = styled.h4({
   fontSize: '1.75rem',
   color: colors.black[800],
   margin: 0,
+  fontFamily: 'IBM Plex Serif',
 });
 
 const Body = styled.p({
-  fontFamily: 'Roboto',
+  fontFamily: 'IBM Plex Mono',
   fontSize: '1rem',
   color: colors.black[800],
   lineHeight: 1.5,

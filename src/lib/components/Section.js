@@ -87,7 +87,7 @@ const StyledImage = styled.img({
 });
 
 const Title = styled.h2({
-  fontFamily: 'Anton',
+  fontFamily: 'IBM Plex Serif',
   color: colors.black.base,
   fontSize: '4rem',
   margin: 0,

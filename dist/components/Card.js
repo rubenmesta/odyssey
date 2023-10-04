@@ -66,10 +66,11 @@ const Container = _styled.default.div({
 const Title = _styled.default.h4({
   fontSize: '1.75rem',
   color: _colors.colors.black[800],
-  margin: 0
+  margin: 0,
+  fontFamily: 'IBM Plex Serif'
 });
 const Body = _styled.default.p({
-  fontFamily: 'Roboto',
+  fontFamily: 'IBM Plex Mono',
   fontSize: '1rem',
   color: _colors.colors.black[800],
   lineHeight: 1.5

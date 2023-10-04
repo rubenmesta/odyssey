@@ -146,7 +146,7 @@ const Title = (0, _styled.default)(_material.Typography)({
     letterSpacing: '2px',
     fontFamily: 'IBM Plex serif',
     fontWeight: 700,
-    fontSize: '5rem',
+    fontSize: '4rem',
     lineHeight: 1,
     marginBottom: '1rem'
   }
@@ -154,7 +154,7 @@ const Title = (0, _styled.default)(_material.Typography)({
 const Subtitle = (0, _styled.default)(_material.Typography)({
   color: '#fff',
   letterSpacing: '2px',
-  fontSize: '1.5rem',
+  fontSize: '1.25rem',
   lineHeight: 1,
   fontWeight: 200,
   marginBottom: '1rem',

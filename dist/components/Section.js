@@ -94,7 +94,7 @@ const StyledImage = _styled.default.img({
   height: 'auto'
 });
 const Title = _styled.default.h2({
-  fontFamily: 'Anton',
+  fontFamily: 'IBM Plex Serif',
   color: _colors.colors.black.base,
   fontSize: '4rem',
   margin: 0

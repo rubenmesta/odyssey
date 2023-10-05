@@ -22,8 +22,8 @@ const Hero = ({
   overlay,
   variant = 'takeover' || 'standard' || 'slim',
   contentAlignment = 'center' || 'left',
+  backgroundPosition,
   search = true,
-
   children,
 }) => {
   const imageHeight = (variant) => {
@@ -63,10 +63,12 @@ const Hero = ({
             ? `linear-gradient(${overlayColor}, ${overlayColor}), url(${image})`
             : `url(${image})`,
           backgroundColor: backgroundColor && backgroundColor,
-          height: 'aito',
+          height: 'auto',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
+          backgroundPosition: backgroundPosition
+            ? backgroundPosition
+            : 'center',
           padding: 0,
           [MEDIA_QUERIES.tablet]: {
             height: containerHeight,

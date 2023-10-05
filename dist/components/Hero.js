@@ -31,6 +31,7 @@ const Hero = _ref => {
     overlay,
     variant = 'takeover' || 'standard' || 'slim',
     contentAlignment = 'center' || 'left',
+    backgroundPosition,
     search = true,
     children
   } = _ref;
@@ -68,10 +69,10 @@ const Hero = _ref => {
         alignItems: 'center',
         background: overlay ? "linear-gradient(".concat(overlayColor, ", ").concat(overlayColor, "), url(").concat(image, ")") : "url(".concat(image, ")"),
         backgroundColor: backgroundColor && backgroundColor,
-        height: 'aito',
+        height: 'auto',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: backgroundPosition ? backgroundPosition : 'center',
         padding: 0,
         [_media.MEDIA_QUERIES.tablet]: {
           height: containerHeight

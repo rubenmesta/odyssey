@@ -46,6 +46,7 @@ function App() {
         <Hero
           variant="slim"
           backgroundColor={colors.black[800]}
+          image={'/img/hero.webp'}
           title={'Explore the Universe'}
           subtitle={'Embark on a Journey Beyond the Stars'}
           primaryCta={'Book Your Adventure'}
@@ -53,6 +54,7 @@ function App() {
           contentAlignment="left"
           search={false}
           searchButtonVariant={'secondary'}
+          backgroundPosition={'bottom'}
         />
         <SearchForm
           title="Seach your next adventure"
@@ -78,6 +80,7 @@ function App() {
             image={'/img/unsplash3.jpg'}
             background={colors.primary[900]}
             color={colors.secondary[100]}
+            fontSize={'2rem'}
           />
         </Box>
         <Section

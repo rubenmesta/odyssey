@@ -5,7 +5,6 @@ import { Box, useTheme, Typography } from '@mui/material';
 
 import Button from './Button';
 import { MEDIA_QUERIES } from '../utils/media';
-import TextField from '@mui/material/TextField';
 import SearchForm from './SeachForm';
 
 const Hero = ({

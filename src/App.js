@@ -50,10 +50,11 @@ function App() {
           title={'Explore the Universe'}
           subtitle={'Embark on a Journey Beyond the Stars'}
           primaryCta={'Book Your Adventure'}
+          primaryCtaVariant={'apricot'}
           secondaryCta={'Explore'}
           contentAlignment="left"
           search={false}
-          searchButtonVariant={'secondary'}
+          searchButtonVariant={'apricot'}
           backgroundPosition={'bottom'}
         />
         <SearchForm

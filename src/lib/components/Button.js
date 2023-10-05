@@ -36,8 +36,8 @@ const variantStyles = {
     color: colors.white[500],
     border: `1px solid ${colors.primary[900]}`,
     '&:hover': {
-      backgroundColor: colors.primary[800],
-      border: `1px solid ${colors.primary[800]}`,
+      backgroundColor: colors.black[500],
+      border: `1px solid ${colors.black[500]}`,
     },
   },
   secondary: {
@@ -58,6 +58,16 @@ const variantStyles = {
     '&:hover': {
       backgroundColor: colors.neutrals[800],
       border: `1px solid ${colors.neutrals[800]}`,
+    },
+  },
+  apricot: {
+    backgroundColor: colors.apricot[500],
+    color: colors.white[500],
+    border: `1px solid ${colors.apricot[500]}`,
+
+    '&:hover': {
+      backgroundColor: colors.apricot[600],
+      border: `1px solid ${colors.apricot[600]}`,
     },
   },
   purple: {
@@ -86,8 +96,8 @@ const variantStyles = {
     border: `1px solid ${colors.white[500]}`,
 
     '&:hover': {
-      color: colors.neutrals[200],
-      borderColor: colors.neutrals[200],
+      color: colors.secondary[100],
+      borderColor: colors.secondary[100],
     },
   },
 };

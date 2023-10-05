@@ -44,8 +44,8 @@ const variantStyles = {
     color: _colors.colors.white[500],
     border: "1px solid ".concat(_colors.colors.primary[900]),
     '&:hover': {
-      backgroundColor: _colors.colors.primary[800],
-      border: "1px solid ".concat(_colors.colors.primary[800])
+      backgroundColor: _colors.colors.black[500],
+      border: "1px solid ".concat(_colors.colors.black[500])
     }
   },
   secondary: {
@@ -64,6 +64,15 @@ const variantStyles = {
     '&:hover': {
       backgroundColor: _colors.colors.neutrals[800],
       border: "1px solid ".concat(_colors.colors.neutrals[800])
+    }
+  },
+  apricot: {
+    backgroundColor: _colors.colors.apricot[500],
+    color: _colors.colors.white[500],
+    border: "1px solid ".concat(_colors.colors.apricot[500]),
+    '&:hover': {
+      backgroundColor: _colors.colors.apricot[600],
+      border: "1px solid ".concat(_colors.colors.apricot[600])
     }
   },
   purple: {
@@ -89,8 +98,8 @@ const variantStyles = {
     color: _colors.colors.white[500],
     border: "1px solid ".concat(_colors.colors.white[500]),
     '&:hover': {
-      color: _colors.colors.neutrals[200],
-      borderColor: _colors.colors.neutrals[200]
+      color: _colors.colors.secondary[100],
+      borderColor: _colors.colors.secondary[100]
     }
   }
 };

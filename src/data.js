@@ -21,21 +21,21 @@ export const cards = [
     title: 'Mars Expedition',
     body: 'Experience the Red Planet like never before. Join our Mars Expedition for an unforgettable journey',
     buttonText: 'Learn More',
-    variant: 'secondary',
+    variant: 'apricot',
   },
   {
     image: '/img/card2.webp',
     title: 'Interstellar Adventure',
     body: 'Embark on a journey to the outer reaches of the galaxy with our Interstellar Adventure package. Witness stunning nebulae, explore alien worlds, and experience zero-gravity like never before.',
     buttonText: 'Learn More',
-    variant: 'secondary',
+    variant: 'apricot',
   },
   {
     image: '/img/card3.webp',
     title: 'Deep Space Odyssey',
     body: 'Embark on a journey to the far reaches of the universe with our Deep Space Odyssey. Witness distant galaxies, explore nebulae, and experience the wonders of deep space.',
     buttonText: 'Learn More',
-    variant: 'secondary',
+    variant: 'apricot',
   },
 ];
 
